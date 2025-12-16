@@ -1,13 +1,13 @@
 import java.util.Scanner;
-class AreaOfCircle
+class CelsiusToFahrenheitConversion
 {
    public static void main(String [] args)
    {
 	Scanner kb=new Scanner(System.in);
-        System.out.println("Enter radius: ");
-	double rad=kb.nextDouble();
+        System.out.println("Enter Celsius: ");
+	double cel=kb.nextDouble();
 	
-	double area=Math.PI*Math.pow(rad,2);
-	System.out.println(area);
+	double fahren=(cel*9/5)+32;
+	System.out.printf("Fahrenheit is " + fahren);
    }
 }
