@@ -9,7 +9,7 @@ public class AgeOfHarry
 		 //Create a int variable currentYear to indicate the age difference between the harry current age and birthYear
 		 int currentYear=harryAge-birthYear;
 		 
-		 //Displaying Current year  as output
+		 //Displaying Current year  as output.
 		 System.out.println("Harry's age in 2024 is "+currentYear);
     }
 } 
