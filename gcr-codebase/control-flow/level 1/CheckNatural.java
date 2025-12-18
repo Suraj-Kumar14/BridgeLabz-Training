@@ -1,5 +1,5 @@
-//Create a class name CheckNatural to indicating the purpose of checking natural number.
 import java.util.Scanner;
+//Create a class name CheckNatural to indicating the purpose of checking natural number.
 public class CheckNatural
 {
 	public static void main(String [] args)
