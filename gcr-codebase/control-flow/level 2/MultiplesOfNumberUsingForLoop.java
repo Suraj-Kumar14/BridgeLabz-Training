@@ -17,7 +17,7 @@ public class MultiplesOfNumberUsingForLoop
 	   	     System.out.println("Multiples of number are: ");
 	         for(int i=100;i!=0;i--)
 		     {	 
-		       if(i%number==0)
+		       if(number%i==0)
 		       {
 		         System.out.println(i);
 				 continue;
