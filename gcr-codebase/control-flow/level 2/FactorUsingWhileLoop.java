@@ -1,6 +1,6 @@
 import java.util.Scanner;
 //Create a class name FactorUsingWhileLoop to indicating the purpose of finding factor using While loop. 
-public class FactorUsingWhileLoopLoop
+public class FactorUsingWhileLoop
 {
 	public static void main(String [] args)
 	{
@@ -19,14 +19,14 @@ public class FactorUsingWhileLoopLoop
 		 
 	   //Calculate and Display factor
 	     System.out.println("Factors of "+number+" are: ");
-		 int i=1;
-	     while(number>i)
+		 int counter=1;
+	     while(number>counter)
 		 {	 
-		   if(number%i==0)
+		   if(number%counter==0)
 		   {
-		     System.out.println(i);
+		     System.out.println(counter);
 		   }
-		   i++;
+		   counter++;
 		 }
 		 
 		 sc.close();
