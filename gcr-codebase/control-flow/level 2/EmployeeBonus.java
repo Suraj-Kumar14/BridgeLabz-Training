@@ -15,7 +15,7 @@ public class EmployeeBonus
 		 
 		 
 	   //Calculate and Display bonus
-	     if(year>=5)
+	     if(year>5)
 		 {
 		   double bonus=salary*5/100;
 		   System.out.println("The bonus amount is "+bonus);
