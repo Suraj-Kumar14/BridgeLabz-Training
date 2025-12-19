@@ -1,5 +1,5 @@
 import java.util.Scanner;
-//Create a class name OddEvenSum to indicating the purpose to add the odd number in odd array and even number in even array.  
+//Create a class name OddEvenArrays to indicating the purpose to add the odd number in odd array and even number in even array.  
 public class OddEvenArrays
 {
 	public static void main(String [] args)
