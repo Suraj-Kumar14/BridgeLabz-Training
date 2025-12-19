@@ -11,13 +11,15 @@ public class NumberOfDigit
 		 int number=sc.nextInt();
 	   
 	   //Check number of digit.
-		 int digit=0;
+		 int count=0;
 		 while(number!=0)
 		 {
 		   number/=10;
-		   digit++;
+		   count++;
 		 }	
-		 System.out.println("number of digit is "+ digit);
+		 
+	   //Display Count	 
+		 System.out.println("number of digit is "+ count);
 		 
 		 sc.close();
 	}
