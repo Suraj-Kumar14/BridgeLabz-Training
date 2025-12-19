@@ -10,7 +10,7 @@ public class CheckStudentCanVote
 	    //Declare a array of size 10
 		int []age=new int [10];
 		//Take input 
-		for(int i=0;i<age.length;i++)
+		for(int i=0;i<age.length ;i++)
 		{
 			System.out.print("Enter the age of "+(i+1)+" Student: ");
 			age[i]=sc.nextInt();
