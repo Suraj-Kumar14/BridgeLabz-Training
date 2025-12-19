@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 //Create a class name DayOfWeek to indicating the purpose to prints the day of the week . 
 public class DayOfWeek
