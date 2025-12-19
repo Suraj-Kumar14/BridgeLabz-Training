@@ -25,7 +25,7 @@ public class MultiplesOfNumberUsingWhileLoop
 			   counter--;
 		     } 
 		 } 
-		 else
+		 else 
 		 {
 		    System.out.println("Please enter positive number and below 100: ");
 		 }	

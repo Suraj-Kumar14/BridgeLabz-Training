@@ -18,7 +18,7 @@ public class FactorUsingForLoop
 		 }
 		 
 	   //Calculate and Display factor
-	     System.out.println("Factors of "+number+" are: ");
+	   	 System.out.println("Factors of "+number+" are: ");
 	     for(int i=1;i<number;i++)
 		 {	 
 		   if(number%i==0)
