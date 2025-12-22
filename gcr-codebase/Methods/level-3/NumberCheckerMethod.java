@@ -112,7 +112,13 @@ public class NumberCheckerMethod
 		System.out.println();
 		//call method storeDigits
 		int []digits=storeDigits(number);
+		 System.out.print("Number is: ");
+		for(int i=0;i<digits.length;i++)
+		{
+		    System.out.print(+digits[i]);
+		}
 		
+		System.out.println();
 		//call method isDuck
 		if(isDuck(digits))
 		  System.out.println("The number is a Duck number!");
