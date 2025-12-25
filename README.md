@@ -5,7 +5,7 @@ This repository tracks my daily learning journey during the BridgeLabz Java Full
 **Date:** 15-Dec-2025
 - Installed and configured Git
 - Set up GitHub repository
-- Learned basic Git commands: 'init', 'clone', 'add', 'commit', 'push'
+- Learned basic Git commands: `init`, `clone`, `add`, `commit`, `push`
 - Pushed initial files to GitHub
 - Code Link: [Core Java Practice](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/core-java-practice)
 ---
@@ -18,14 +18,14 @@ This repository tracks my daily learning journey during the BridgeLabz Java Full
 ---
 ###  Day 3 – Programming Elements in Java 
 **Date:** 17-Dec-2025  
-- Learned variables, data types, operators, user input/output
+- Learned `variables`, `data types`, `operators`, `user input/output`
 - Solved practice problems
 - Pushed solutions to GitHub
 - Code Link: [Programming Elements](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/core-java-practice/gcr-codebase/programming-elements)
 ---
 ### Day 4 - Control Flow
 **Date:** 18-Dec-2025
-- Practiced 'if', 'else', 'switch', and loops
+- Practiced `if`, `else`, `switch`, and `loops`
 - Implemented decision-making programs
 - Code Link: [Control Flow](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/core-java-practice/gcr-codebase/control-flow)
 ---
