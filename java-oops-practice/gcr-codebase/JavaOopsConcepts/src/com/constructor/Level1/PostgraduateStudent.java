@@ -2,7 +2,7 @@ package com.constructor.Level1;
 
 public class PostgraduateStudent extends Student {
 	
-	//subclass constructor
+	//constructor 
 	public PostgraduateStudent(int rollNumber,String name,double CGPA) {
 		super(rollNumber,name,CGPA);
 	}
