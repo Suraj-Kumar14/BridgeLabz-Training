@@ -4,8 +4,7 @@ public class BankAccountMain {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		 // Create two bank accounts
-	       BankAccount account1 = new BankAccount("Lynda Princy", "ACC12345", 1000.00);
+		 BankAccount account1 = new BankAccount("Lynda Princy", "ACC12345", 1000.00);
 	       BankAccount account2 = new BankAccount("Prince Danish", "ACC67890", 500.00);
 	       // Display account details
 	       System.out.println("\nAccount 1 Details:");
@@ -22,6 +21,7 @@ public class BankAccountMain {
 	       account2.displayAccountDetails();
 	       account2.deposit(100);
 	       account2.withdraw(800);
+
 	}
 
 }
