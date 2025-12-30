@@ -59,3 +59,24 @@ This repository tracks my daily learning journey during the BridgeLabz Java Full
 - practice String, Math, and Array problems
 - Code Link: [Leet-code-base](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/core-java-practice/leet-code-codebase)
 ---
+### Day 10 - scenario-code-base problem
+**Date:** 26-Dec-2025
+- Solved 3 scenario-based problems
+- Solved practice problems and enhance the feature
+- Pushed solutions to GitHub
+- Code Link: [core-java-practice(scenario-code-base)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/core-java-practice/scenario-based-codebase)
+---
+### Day 11 - scenario-code-base problem
+**Date:** 29-Dec-2025
+- Solved 5 scenario-based problems
+- Solved practice problems and enchance the feature
+- Pushed solutions to GitHub
+- Code Link: [core-java-practice(scenario-code-base)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/core-java-practice/scenario-based-codebase)
+---
+### Day 12 - scenario-code-base problem
+**Date:** 30-Dec-2025
+- Solved 5 scenario-based problems
+- Solved practice problems and enchance the feature
+- Pushed solutions to GitHub
+- Code Link: [core-java-practice(scenario-code-base)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/core-java-practice/scenario-based-codebase)
+---
