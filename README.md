@@ -21,12 +21,19 @@ This repository tracks my daily learning journey during the BridgeLabz Java Full
 - solved many problem based on keyword Instance, this, and final
 - Solved practice problems and enchance the feature
 - Pushed solutions to GitHub
-- Code Link: [java-Oops-practice(keyword and operator)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java-oops-pratice/java-oops-practice/gcr-codebase/JavaOopsConcepts/src/com/keywordandoperator/Level1)
+- Code Link: [java-oops-practice(keyword and operator)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java-oops-pratice/java-oops-practice/gcr-codebase/JavaOopsConcepts/src/com/keywordandoperator/Level1)
 ---
 ### Day 13 – Object Modeling, Class Diagram
 **Date:** 30-Dec-2025
 - solved many problem based on object Modeling and class Diagram
 - Solved practice problems and enchance the feature
 - Pushed solutions to GitHub
-- Code Link: [java-Oops-practice(objectmodeling)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java-oops-pratice/java-oops-practice/gcr-codebase/JavaOopsConcepts/src/com/objectmodeling/AssistedProblems)
+- Code Link: [java-oops-practice(objectmodeling)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java-oops-pratice/java-oops-practice/gcr-codebase/JavaOopsConcepts/src/com/objectmodeling/AssistedProblems)
+---
+### Day 14 - Inheritance
+**Date:** 31-Dec-2025
+- Solved many problem based on Inheritance
+- Solved practice problems and enchance the feature
+- Pushed solutions to GitHub
+- Code Link: [java-oops-practice(inheritance)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java-oops-pratice/java-oops-practice/gcr-codebase/JavaOopsConcepts/src/com/inheritance)
 ---
