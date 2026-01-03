@@ -37,3 +37,17 @@ This repository tracks my daily learning journey during the BridgeLabz Java Full
 - Pushed solutions to GitHub
 - Code Link: [java-oops-practice(inheritance)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java-oops-pratice/java-oops-practice/gcr-codebase/JavaOopsConcepts/src/com/inheritance)
 ---
+### Day 15 - Encapsulation, Polymorphism, Interface, and Abstract Classes
+**Date:** 01-Jan-2026
+- Solved many problem based on Encapsulation, Polymorphism, Interface, and Abstract Classes
+- Solved practice problems and enchance the feature
+- Pushed solutions to GitHub
+- Code Link: [java-oops-practice(Encapsulation)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java-oops-pratice/java-oops-practice/gcr-codebase/JavaOopsConcepts/src/com/encapsulationandpolymorphism)
+---
+### Day 16 - Scenario-code-base problem
+**Date:** 02-Jan-2026
+- solved 5 scenario-based problems
+- Solved practice problems and enchance the feature
+- Pushed solutions to GitHub
+- Code Link: [java-oops-practice(scenario-code-base)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java-oops-pratice/java-oops-practice/scenario-based-codebase/ScenarioBasedCodebase/src/com)
+---
