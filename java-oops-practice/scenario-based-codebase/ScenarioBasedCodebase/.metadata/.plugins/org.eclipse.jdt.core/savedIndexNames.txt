@@ -1,2 +1,0 @@
-INDEX VERSION 1.134+C:\Users\suraj\OneDrive\Desktop\JavaProgrammingWorkspace\java-oops-practice\scenario-based-codebase\ScenarioBasedCodebase\.metadata\.plugins\org.eclipse.jdt.core
-1865797976.index
