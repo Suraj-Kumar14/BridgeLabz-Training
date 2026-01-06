@@ -126,8 +126,8 @@
 - Solved 2 scenario based problem
 - Solved practice problems and enchance the feature
 - Pushed solutions to GitHub
-- Code Link: [dsa-practice(stackqueue)]()
-- Code Link: [java-oops-practice]()
+- Code Link: [dsa-practice(stackqueue)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/dsa-practice/dsa-practice/gcr-code-base/DataStructure/src/com/stackqueue)
+- Code Link: [java-oops-practice(scenario-code-base)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java-oops-pratice/java-oops-practice/scenario-based-codebase/ScenarioBasedCodebase/src/com)
 ---
 ### Day 18 - Sorting Algorithm and scenario-code-base problem
 **Date:** 05-Jan-2026
@@ -135,15 +135,16 @@
 - Solved 2 scenario based problem
 - Solved practice problems and enchance the feature
 - Pushed solutions to GitHub
-- Code Link: [dsa-practice(sortingAlgorithm )]()
-- Code Link: [java-oops-practice]()
+- Code Link: [dsa-practice(sortingAlgorithm )](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/dsa-practice/dsa-practice/gcr-code-base/DataStructure/src/com/sortingalgorithms)
+- Code Link: [java-oops-practice(scenario-code-base)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java-oops-pratice/java-oops-practice/scenario-based-codebase/ScenarioBasedCodebase/src/com)
 ---
-### Day 19 - Scenario-code-base problem
+### Day 19 - Searching algorithm and Scenario-code-base problem
 **Date:** 06-Jan-2026
-- solved many problem based on linear and Binary search
+- solved many problem based on searching algorithms
+- StringBuilder, StringBuffer, File Reader, InputStreamReader, and Searching algorithm
 - Solved 4 scenario based problem
 - Solved practice problems and enchance the feature
 - Pushed solutions to GitHub
-- Code Link: [dsa-practice(linearBinarysearch)]()
-- Code Link: [java-oops-practice]()
+- Code Link: [dsa-practice(SearchingAlgorithms)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/dsa-practice/dsa-practice/gcr-code-base/DataStructure/src/com/searchingalgorithms)
+- Code Link: [java-oops-practice(scenario-code-base)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java-oops-pratice/java-oops-practice/scenario-based-codebase/ScenarioBasedCodebase/src/com)
 ---
