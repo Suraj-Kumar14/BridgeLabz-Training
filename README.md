@@ -1,6 +1,8 @@
 # BridgeLabz Training Progress Log
 This repository tracks my daily learning journey during the BridgeLabz Java Full Stack Program. Each day includes Git/GitHub activities, Java concepts, and committed code links.
 ---
+### Week-2 Object-Oriented Programming
+---
 ### Day 10 – Object-Oriented Programming Fundamental
 **Date:** 26-Dec-2025
 - Create new branch java-oops-practice
@@ -44,6 +46,8 @@ This repository tracks my daily learning journey during the BridgeLabz Java Full
 - Pushed solutions to GitHub
 - Code Link: [java-oops-practice(Encapsulation)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java-oops-pratice/java-oops-practice/gcr-codebase/JavaOopsConcepts/src/com/encapsulationandpolymorphism)
 ---
+### Week-3 Scenario-based Questions
+---
 ### Day 16 - Scenario-code-base problem
 **Date:** 02-Jan-2026
 - solved 5 scenario-based problems
@@ -69,6 +73,13 @@ This repository tracks my daily learning journey during the BridgeLabz Java Full
 **Date:** 06-Jan-2026
 - solved 4 scenario-based problems
 - Solved practice problems and enchance the feature
+- Pushed solutions to GitHub
+- Code Link: [java-oops-practice(scenario-code-base)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java-oops-pratice/java-oops-practice/scenario-based-codebase/ScenarioBasedCodebase/src/com)
+---
+### Day 20 - Scenario-code-base problem
+**Date:** 07-Jan-2026
+- Solved 3 Scenario-based problems
+- Solved practice problems and enhance the feature
 - Pushed solutions to GitHub
 - Code Link: [java-oops-practice(scenario-code-base)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java-oops-pratice/java-oops-practice/scenario-based-codebase/ScenarioBasedCodebase/src/com)
 ---
