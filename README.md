@@ -1,6 +1,8 @@
 # BridgeLabz Training Progress Log 
 This repository tracks my daily learning journey during the BridgeLabz Java Full Stack Program. Each day includes Git/GitHub activities, Java concepts, and committed code links.
 ---
+### Week-3 Data-Structure
+---
 ### Day 16 – Data Structure-Linkedlist
 **Date:** 02-Jan-2026
 - created new branch name "dsa-practice"
@@ -30,4 +32,10 @@ This repository tracks my daily learning journey during the BridgeLabz Java Full
 - Solved practice problems and enchance the feature
 - Pushed solutions to GitHub
 -  Code Link: [dsa-practice(SearchingAlgorithms)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/dsa-practice/dsa-practice/gcr-code-base/DataStructure/src/com/searchingalgorithms)
+---
+### day 20 - Algorithm's Runtime Analysis & Big-O Notation
+**Date:** 07-Jan-2026
+- Solved and learned Algorithm's Runtime & Big-O Notation
+- Pushed solutions to GitHub
+- Code Link: [dsa-practice(Notation)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/dsa-practice/dsa-practice/gcr-code-base/DataStructure/src/com/notation)
 ---
