@@ -1,7 +1,9 @@
 # BridgeLabz Training Progress Log
 
 ## This repository tracks my daily learning journey during the BridgeLabz Java Full Stack Program. Each day includes Git/GitHub activities, Java concepts, and committed code links.
-
+---
+### Week-1 Git, GitHub & Core Java Fundamentals
+---
 ### Day 1 – Git & GitHub Setup
 **Date:** 15-Dec-2025
 - Installed and configured Git
@@ -60,6 +62,8 @@
 - practice String, Math, and Array problems
 - Code Link: [Leet-code-base](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/core-java-practice/leet-code-codebase)
 ---
+### Week-2 Object-oriented Programming
+---
 ### Day 10 - Object-oriented Programming Fundamental and scenario-code-base problem
 **Date:** 26-Dec-2025
 - Create new branch java-oops-practice
@@ -111,6 +115,8 @@
 - Pushed solutions to GitHub
 - Code Link: [java-oops-practice(Encapsulation)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java-oops-pratice/java-oops-practice/gcr-codebase/JavaOopsConcepts/src/com/encapsulationandpolymorphism)
 ---
+### Week-3 Data-Structure and Scenario-based Questions
+---
 ### Day 16 – Data Strcuture and scenario-code-base problem
 **Date:** 02-Jan-2026
 - created new branch name "dsa-practice"
@@ -146,5 +152,13 @@
 - Solved practice problems and enchance the feature
 - Pushed solutions to GitHub
 - Code Link: [dsa-practice(SearchingAlgorithms)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/dsa-practice/dsa-practice/gcr-code-base/DataStructure/src/com/searchingalgorithms)
+- Code Link: [java-oops-practice(scenario-code-base)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java-oops-pratice/java-oops-practice/scenario-based-codebase/ScenarioBasedCodebase/src/com)
+---
+### Day 20 - Algorithm's Runtime Analysis & Big-O Notation
+**date:** 07-Jan-2026
+- Worked on `dsa-practice` and `java-oops-practice` branch
+- Solved and learned Algorith's runtime & Big-O Notation
+- Pushed solutions to GitHub
+- Code Link: [dsa-practice(Notation)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/dsa-practice/dsa-practice/gcr-code-base/DataStructure/src/com/notation)
 - Code Link: [java-oops-practice(scenario-code-base)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java-oops-pratice/java-oops-practice/scenario-based-codebase/ScenarioBasedCodebase/src/com)
 ---
