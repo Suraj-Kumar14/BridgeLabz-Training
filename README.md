@@ -33,9 +33,15 @@ This repository tracks my daily learning journey during the BridgeLabz Java Full
 - Pushed solutions to GitHub
 -  Code Link: [dsa-practice(SearchingAlgorithms)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/dsa-practice/dsa-practice/gcr-code-base/DataStructure/src/com/searchingalgorithms)
 ---
-### day 20 - Algorithm's Runtime Analysis & Big-O Notation
+### Day 20 - Algorithm's Runtime Analysis & Big-O Notation
 **Date:** 07-Jan-2026
 - Solved and learned Algorithm's Runtime & Big-O Notation
 - Pushed solutions to GitHub
 - Code Link: [dsa-practice(Notation)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/dsa-practice/dsa-practice/gcr-code-base/DataStructure/src/com/notation)
+---
+### Day 21 - Leet Code Problem Practice
+**Date:** 09-Jan-2026
+- Solved 2 problem on leetcode
+- Improved design & problem-solving skils
+- Code Link: [leetcode](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/dsa-practice/dsa-practice/leet-code-codebase)
 ---
