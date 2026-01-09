@@ -1,6 +1,7 @@
 # BridgeLabz Training Progress Log
-This repository tracks my daily learning journey during the BridgeLabz Java Full Stack Program. Each day includes Git/GitHub activities, Java concepts, and committed code links.
----
+
+## This repository tracks my daily learning journey during the BridgeLabz Java Full Stack Program. Each day includes Git/GitHub activities, Java concepts, and committed code links.
+
 ### Week-2 Object-Oriented Programming
 ---
 ### Day 10 – Object-Oriented Programming Fundamental
@@ -84,14 +85,14 @@ This repository tracks my daily learning journey during the BridgeLabz Java Full
 - Code Link: [java-oops-practice(scenario-code-base)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java-oops-pratice/java-oops-practice/scenario-based-codebase/ScenarioBasedCodebase/src/com)
 ---
 ### Day 21 - Scenario-code-base problem
-**Date:** 07-Jan-2026
+**Date:** 08-Jan-2026
 - Solved 3 Scenario-based problems
 - Solved practice problems and enhance the feature
 - Pushed solutions to GitHub
 - Code Link: [java-oops-practice(scenario-code-base)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java-oops-pratice/java-oops-practice/scenario-based-codebase/ScenarioBasedCodebase/src/com)
 ---
 ### Day 22 - Scenario-code-base problem
-**Date:** 07-Jan-2026
+**Date:** 09-Jan-2026
 - Solved 3 Scenario-based problems
 - Solved practice problems and enhance the feature
 - Pushed solutions to GitHub
