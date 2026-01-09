@@ -162,3 +162,12 @@
 - Code Link: [dsa-practice(Notation)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/dsa-practice/dsa-practice/gcr-code-base/DataStructure/src/com/notation)
 - Code Link: [java-oops-practice(scenario-code-base)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java-oops-pratice/java-oops-practice/scenario-based-codebase/ScenarioBasedCodebase/src/com)
 ---
+### Day 21 - Scenario-Based Problems
+**Date:** 08-Jan-2026
+- Solved 3 scenario-based problems
+- Improved design & problem-solving skills
+- Code Link: [scenario-code-base](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java-oops-pratice/java-oops-practice/scenario-based-codebase/ScenarioBasedCodebase/src/com)
+---
+### Week-4 Java collections Practice
+**Focus:** Working with collections problem
+---
