@@ -170,5 +170,3 @@
 ---
 ### Week-4 Java collections Practice
 ---
-**Focus:** Working with collections problem
----
