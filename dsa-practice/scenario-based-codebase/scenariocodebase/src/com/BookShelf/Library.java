@@ -28,13 +28,14 @@ public class Library {
 			for(Book b: books) {
 				if(b.getTitle().equals(title) && !b.isBorrowed) {
 					b.isBorrowed=true;
-					books.remove(b);
+					
 					System.out.println(title+" borrowed from "+genre);
 				    System.out.println();
 					return;
 				}
 			}
 			System.out.println(title+" not found in "+genre);
+			System.out.println();
 			return ;
 		}
 		 System.out.println("Book not available to borrow: " + title);
@@ -47,6 +48,7 @@ public class Library {
                 if (b.getTitle().equals(title) && b.isBorrowed) {
                     b.isBorrowed = false; 
                     System.out.println(title + " returned to " + genre);
+                    System.out.println();
                     return;
                 }
             }
@@ -58,13 +60,13 @@ public class Library {
 	//Display catalog
 	public void displayCatalog() {
 		if(libraryCatalog.isEmpty()) {
-			System.out.println("No Genre available!");
+			System.out.println("No Genre/Book available!");
 			return;
 		}
 		for(String genre:libraryCatalog.keySet()) {
 			System.out.println("Genre: "+genre);
 			for(Book book: libraryCatalog.get(genre)) {
-				System.out.println(" "+book);
+				System.out.println(" "+book+ (book.isBorrowed ? "(Borrowed)": "(Available)"));
 				System.out.println();
 			}
 		}
