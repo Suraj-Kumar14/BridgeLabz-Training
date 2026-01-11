@@ -1,4 +1,4 @@
-package com.searchingalgorithms.binarysearch;
+package com.searchingalgorithms.linearsearch;
 
 public class FirstNegativeSearch {
 	
