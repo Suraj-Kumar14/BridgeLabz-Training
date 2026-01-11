@@ -1,4 +1,4 @@
-package com.notation.compareLinearBinaryPerformnce;
+package com.timecomplexity.compareLinearBinaryPerformnce;
 
 public class DataSet {
 
