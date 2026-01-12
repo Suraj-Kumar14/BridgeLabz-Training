@@ -177,8 +177,8 @@
 - Improved design & problem-solving skills  
 
 🔗 Code Link:  
-[Scenario Code Base](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java-oops-pratice/java-oops-practice/scenario-based-codebase/ScenarioBasedCodebase/src/com)
-[LeetCode](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/dsa-practice/dsa-practice/leet-code-codebase)
+- [Scenario Code Base](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java-oops-pratice/java-oops-practice/scenario-based-codebase/ScenarioBasedCodebase/src/com)
+- [LeetCode](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/dsa-practice/dsa-practice/leet-code-codebase)
 ---
 ### Day 23 - Scenario Based Problems
 **Date:** 10-Jan-2026
