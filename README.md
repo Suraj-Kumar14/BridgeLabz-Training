@@ -170,3 +170,21 @@
 ---
 ### Week-4 Java collections Practice
 ---
+### Day 22 – Scenario-Based Problems and Leetcode Problems  
+**Date:** 09-Jan-2026  
+- Solved 3 scenario-based problems  
+- Solved 3 Leetcode Problems
+- Improved design & problem-solving skills  
+
+🔗 Code Link:  
+[Scenario Code Base](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java-oops-pratice/java-oops-practice/scenario-based-codebase/ScenarioBasedCodebase/src/com)
+[LeetCode](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/dsa-practice/dsa-practice/leet-code-codebase)
+---
+### Day 23 - Scenario Based Problems
+**Date:** 10-Jan-2026
+- Solved 3 scenario based problem
+- Improved design & problem-solving skills
+
+🔗 Code Link: 
+- [scenario-based-codebase](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/dsa-practice/dsa-practice/scenario-based-codebase/scenariocodebase/src/com)
+---
