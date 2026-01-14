@@ -141,8 +141,10 @@
 - Solved 2 scenario based problem
 - Solved practice problems and enchance the feature
 - Pushed solutions to GitHub
-- Code Link: [dsa-practice(sortingAlgorithm )](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/dsa-practice/dsa-practice/gcr-code-base/DataStructure/src/com/sortingalgorithms)
-- Code Link: [java-oops-practice(scenario-code-base)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java-oops-pratice/java-oops-practice/scenario-based-codebase/ScenarioBasedCodebase/src/com)
+
+🔗 Code Link:
+- [dsa-practice(sortingAlgorithm )](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/dsa-practice/dsa-practice/gcr-code-base/DataStructure/src/com/sortingalgorithms)
+- [java-oops-practice(scenario-code-base)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java-oops-pratice/java-oops-practice/scenario-based-codebase/ScenarioBasedCodebase/src/com)
 ---
 ### Day 19 - Searching algorithm and Scenario-code-base problem
 **Date:** 06-Jan-2026
@@ -151,22 +153,28 @@
 - Solved 4 scenario based problem
 - Solved practice problems and enchance the feature
 - Pushed solutions to GitHub
-- Code Link: [dsa-practice(SearchingAlgorithms)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/dsa-practice/dsa-practice/gcr-code-base/DataStructure/src/com/searchingalgorithms)
-- Code Link: [java-oops-practice(scenario-code-base)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java-oops-pratice/java-oops-practice/scenario-based-codebase/ScenarioBasedCodebase/src/com)
+
+🔗 Code Link:
+- [dsa-practice(SearchingAlgorithms)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/dsa-practice/dsa-practice/gcr-code-base/DataStructure/src/com/searchingalgorithms)
+- [java-oops-practice(scenario-code-base)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java-oops-pratice/java-oops-practice/scenario-based-codebase/ScenarioBasedCodebase/src/com)
 ---
 ### Day 20 - Algorithm's Runtime Analysis & Big-O Notation
 **date:** 07-Jan-2026
 - Worked on `dsa-practice` and `java-oops-practice` branch
 - Solved and learned Algorith's runtime & Big-O Notation
 - Pushed solutions to GitHub
-- Code Link: [dsa-practice(Notation)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/dsa-practice/dsa-practice/gcr-code-base/DataStructure/src/com/notation)
-- Code Link: [java-oops-practice(scenario-code-base)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java-oops-pratice/java-oops-practice/scenario-based-codebase/ScenarioBasedCodebase/src/com)
+
+🔗 Code Link: 
+- [dsa-practice(Notation)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/dsa-practice/dsa-practice/gcr-code-base/DataStructure/src/com/notation)
+- [java-oops-practice(scenario-code-base)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java-oops-pratice/java-oops-practice/scenario-based-codebase/ScenarioBasedCodebase/src/com)
 ---
 ### Day 21 - Scenario-Based Problems
 **Date:** 08-Jan-2026
 - Solved 3 scenario-based problems
 - Improved design & problem-solving skills
-- Code Link: [scenario-code-base](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java-oops-pratice/java-oops-practice/scenario-based-codebase/ScenarioBasedCodebase/src/com)
+
+🔗 Code Link: 
+- [scenario-code-base](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java-oops-pratice/java-oops-practice/scenario-based-codebase/ScenarioBasedCodebase/src/com)
 ---
 ### Week-4 Java collections Practice
 ---
@@ -187,4 +195,24 @@
 
 🔗 Code Link: 
 - [scenario-based-codebase](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/dsa-practice/dsa-practice/scenario-based-codebase/scenariocodebase/src/com)
+---
+### Day 24 - Scenario Based Problems
+**Date:** 12-Jan-2026
+- Solved 3 scenario based problems in OOPs
+- Solved 3 scenario-based problems in data structure
+- Improved design & problem-solving skills
+
+🔗 Code Link: 
+- [scenario-based-codebase](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/dsa-practice/dsa-practice/scenario-based-codebase/scenariocodebase/src/com)
+- [Scenario-Code-Base](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java-oops-pratice/java-oops-practice/scenario-based-codebase/ScenarioBasedCodebase/src/com)
+---
+### Day 25 - Scenario Based Problems
+**Date:** 13-Jan-2026
+- Solved 3 scenario based problems in OOPs
+- Solved 3 scenario-based problems in data structure
+- Improved design & problem-solving skills
+
+🔗 Code Link: 
+- [scenario-based-codebase](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/dsa-practice/dsa-practice/scenario-based-codebase/scenariocodebase/src/com)
+- [Scenario-Code-Base](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java-oops-pratice/java-oops-practice/scenario-based-codebase/ScenarioBasedCodebase/src/com)
 ---
