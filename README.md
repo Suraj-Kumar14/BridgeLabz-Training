@@ -82,19 +82,44 @@
 - Solved 3 Scenario-based problems
 - Solved practice problems and enhance the feature
 - Pushed solutions to GitHub
-- Code Link: [java-oops-practice(scenario-code-base)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java-oops-pratice/java-oops-practice/scenario-based-codebase/ScenarioBasedCodebase/src/com)
+
+🔗 Code Link:
+- [java-oops-practice(scenario-code-base)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java-oops-pratice/java-oops-practice/scenario-based-codebase/ScenarioBasedCodebase/src/com)
 ---
 ### Day 21 - Scenario-code-base problem
 **Date:** 08-Jan-2026
 - Solved 3 Scenario-based problems
 - Solved practice problems and enhance the feature
 - Pushed solutions to GitHub
-- Code Link: [java-oops-practice(scenario-code-base)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java-oops-pratice/java-oops-practice/scenario-based-codebase/ScenarioBasedCodebase/src/com)
+
+🔗 Code Link:
+- [java-oops-practice(scenario-code-base)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java-oops-pratice/java-oops-practice/scenario-based-codebase/ScenarioBasedCodebase/src/com)
 ---
 ### Day 22 - Scenario-code-base problem
 **Date:** 09-Jan-2026
 - Solved 3 Scenario-based problems
 - Solved practice problems and enhance the feature
 - Pushed solutions to GitHub
-- Code Link: [java-oops-practice(scenario-code-base)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java-oops-pratice/java-oops-practice/scenario-based-codebase/ScenarioBasedCodebase/src/com)
+
+🔗 Code Link:
+- [java-oops-practice(scenario-code-base)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java-oops-pratice/java-oops-practice/scenario-based-codebase/ScenarioBasedCodebase/src/com)
 ---
+### Day 23 - Scenario-code-base problem
+**Date:** 12-Jan-2026
+- Solved 3 Scenario-based problems
+- Solved practice problems and enhance the feature
+- Pushed solutions to GitHub
+
+🔗 Code Link:
+- [java-oops-practice(scenario-code-base)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java-oops-pratice/java-oops-practice/scenario-based-codebase/ScenarioBasedCodebase/src/com)
+---
+### Day 24 - Scenario-code-base problem
+**Date:** 13-Jan-2026
+- Solved 2 Scenario-based problems
+- Solved practice problems and enhance the feature
+- Pushed solutions to GitHub
+
+🔗 Code Link:
+- [java-oops-practice(scenario-code-base)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java-oops-pratice/java-oops-practice/scenario-based-codebase/ScenarioBasedCodebase/src/com)
+---
+
