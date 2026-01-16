@@ -69,3 +69,19 @@ This repository tracks my daily learning journey during the BridgeLabz Java Full
 🔗 Code Link: 
 - [scenario-based-codebase](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/dsa-practice/dsa-practice/scenario-based-codebase/scenariocodebase/src/com)
 ---
+### Day 25 - Scenario Based Problems
+**Date:** 15-Jan-2026
+- Solved 2 scenario based problem
+- Improved design & problem-solving skills
+
+🔗 Code Link: 
+- [scenario-based-codebase](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/dsa-practice/dsa-practice/scenario-based-codebase/scenariocodebase/src/com)
+---
+### Day 26 - Scenario Based Problems
+**Date:** 16-Jan-2026
+- Solved 3 scenario based problem
+- Improved design & problem-solving skills
+
+🔗 Code Link: 
+- [scenario-based-codebase](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/dsa-practice/dsa-practice/scenario-based-codebase/scenariocodebase/src/com)
+---
