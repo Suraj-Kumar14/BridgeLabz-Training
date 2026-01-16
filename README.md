@@ -176,8 +176,6 @@
 🔗 Code Link: 
 - [scenario-code-base](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java-oops-pratice/java-oops-practice/scenario-based-codebase/ScenarioBasedCodebase/src/com)
 ---
-### Week-4 Java collections Practice
----
 ### Day 22 – Scenario-Based Problems and Leetcode Problems  
 **Date:** 09-Jan-2026  
 - Solved 3 scenario-based problems  
@@ -215,4 +213,27 @@
 🔗 Code Link: 
 - [scenario-based-codebase](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/dsa-practice/dsa-practice/scenario-based-codebase/scenariocodebase/src/com)
 - [Scenario-Code-Base](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java-oops-pratice/java-oops-practice/scenario-based-codebase/ScenarioBasedCodebase/src/com)
+---
+### Week-4 Java collections Practice scenario-based problems
+---
+### Day 26 - Java generics and Scenario Based Problems
+**Date:** 15-Jan-2026
+- Create a new branch java-collections-practice
+- Solved problems on Java generics 
+- Solved 3 scenario-based problems in data structure
+- Improved design & problem-solving skills
+
+🔗 Code Link: 
+- [scenario-based-codebase](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/dsa-practice/dsa-practice/scenario-based-codebase/scenariocodebase/src/com)
+- [java-collections-practice(Generics)]()
+---
+### Day 26 - Java collection and Scenario Based Problems
+**Date:** 16-Jan-2026
+- Solved problems on Java collection 
+- Solved 3 scenario-based problems in data structure
+- Improved design & problem-solving skills
+
+🔗 Code Link: 
+- [scenario-based-codebase](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/dsa-practice/dsa-practice/scenario-based-codebase/scenariocodebase/src/com)
+- [Collection)]()
 ---
