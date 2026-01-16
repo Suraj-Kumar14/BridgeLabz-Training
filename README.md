@@ -235,5 +235,5 @@
 
 🔗 Code Link: 
 - [scenario-based-codebase](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/dsa-practice/dsa-practice/scenario-based-codebase/scenariocodebase/src/com)
-- [Collection)]()
+- [Collection]()
 ---
