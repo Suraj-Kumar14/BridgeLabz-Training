@@ -1,8 +1,10 @@
 package com.collections.set;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
-import java.util.TreeSet;
 
 public class SortedSet {
 	public static void main(String[] args) {
@@ -12,12 +14,10 @@ public class SortedSet {
 		set.add(3);
 		set.add(9);
 		set.add(1);
+				
+		List<Integer>list=new ArrayList<>(set);
 		
-		TreeSet<Integer>ts=new TreeSet<>(set);
-		
-//		for(Integer s:set) {
-//			ts.add(s);
-//		}
-		System.out.println(ts);
+		//Collections.sort(list);
+		System.out.println(list);
 	}
 }
