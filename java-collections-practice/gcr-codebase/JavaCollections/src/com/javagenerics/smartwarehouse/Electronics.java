@@ -6,5 +6,9 @@ public class Electronics extends WarehouseItem{
 		super(itemName, price, quantity);
 		
 	}
-
+	
+	@Override
+	public String toString() {
+		return getItemName()+": Rs"+getPrice();
+	}	
 }
