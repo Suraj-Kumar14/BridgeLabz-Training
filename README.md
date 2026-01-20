@@ -9,11 +9,44 @@ Each day includes:
 - Scenario-based problems
 - GitHub commits with code links
 ---
-### Day 26 – Git & GitHub Setup  
+### Day 26 – Java Generics  
 **Date:** 15-Jan-2025  
 - Create New branch 'java-collections-practice'
-- Solved Problem based on Java Generics
+- Learn and Solved Problem based on Java Generics
+- Improved design & problem-solving skills
+
+🔗 Code Link:  
+- [java-collections-practice](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java-collections-practice/java-collections-practice/gcr-codebase/JavaCollections/src/com/javagenerics)
+---
+### Day 27 – BST and Graph  
+**Date:** 16-Jan-2025  
+- Learn about Binary search tree and Graph
+- Improved design & problem-solving skills
+
+🔗 Code Link:  
+- [java-collections-practice](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java-collections-practice/java-collections-practice/gcr-codebase/JavaCollections/src/com/collections)
+---
+### Day 28 – Java Collections  
+**Date:** 17-Jan-2025  
+- Learn and Solved Problem based on Java Collections
+- Improved design & problem-solving skills
+
+🔗 Code Link:  
+- [java-collections-practice](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java-collections-practice/java-collections-practice/gcr-codebase/JavaCollections/src/com/collections)
+---
+### Day 29 – Java Streams  
+**Date:** 19-Jan-2025  
+- Learn and Solved Problem based on Java Streams
 - Improved design & problem-solving skills
 
 🔗 Code Link:  
 - [java-collections-practice]()
+---
+### Day 30 – Java Exceptions  
+**Date:** 20-Jan-2025  
+- Learn and Solved Problem based on Java Exceptions
+- Improved design & problem-solving skills
+
+🔗 Code Link:  
+- [java-collections-practice]()
+---
