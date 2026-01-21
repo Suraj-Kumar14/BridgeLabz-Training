@@ -24,7 +24,7 @@ Each day includes:
 - Improved design & problem-solving skills
 
 🔗 Code Link:  
-- [java-collections-practice](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java-collections-practice/java-collections-practice/gcr-codebase/JavaCollections/src/com/collections)
+- [java-collections-practice]()
 ---
 ### Day 28 – Java Collections  
 **Date:** 17-Jan-2025  
@@ -40,7 +40,7 @@ Each day includes:
 - Improved design & problem-solving skills
 
 🔗 Code Link:  
-- [java-collections-practice]()
+- [java-collections-practice](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java-collections-practice/java-collections-practice/gcr-codebase/JavaCollections/src/com/javastreams)
 ---
 ### Day 30 – Java Exceptions  
 **Date:** 20-Jan-2025  
@@ -50,3 +50,10 @@ Each day includes:
 🔗 Code Link:  
 - [java-collections-practice]()
 ---
+### Day 30 – Regex & Junit  
+**Date:** 21-Jan-2025  
+- Learn and Solved Problem based on Regex & Junit
+- Improved design & problem-solving skills
+
+🔗 Code Link:  
+- [java-collections-practice]()
