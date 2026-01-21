@@ -225,9 +225,9 @@
 
 🔗 Code Link: 
 - [scenario-based-codebase](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/dsa-practice/dsa-practice/scenario-based-codebase/scenariocodebase/src/com)
-- [java-collections-practice(Generics)]()
+- [(Java-Generics)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java-collections-practice/java-collections-practice/gcr-codebase/JavaCollections/src/com/javagenerics)
 ---
-### Day 26 - Java collection and Scenario Based Problems
+### Day 27 - Java collection and Scenario Based Problems
 **Date:** 16-Jan-2026
 - Solved problems on Java collection 
 - Solved 3 scenario-based problems in data structure
@@ -235,5 +235,44 @@
 
 🔗 Code Link: 
 - [scenario-based-codebase](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/dsa-practice/dsa-practice/scenario-based-codebase/scenariocodebase/src/com)
-- [Collection]()
+- [Collections](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java-collections-practice/java-collections-practice/gcr-codebase/JavaCollections/src/com/collections)
+---
+### Day 28 - Scenario Based Problems
+**Date:** 17-Jan-2026
+- Solved 2 scenario-based problems in oops
+- Solved 3 scenario-based problems in data structure
+- Improved design & problem-solving skills
+
+🔗 Code Link: 
+- [scenario-based-codebase](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/dsa-practice/dsa-practice/scenario-based-codebase/scenariocodebase/src/com)
+- [Scenario-Code-Base](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java-oops-pratice/java-oops-practice/scenario-based-codebase/ScenarioBasedCodebase/src/com)
+---
+### Day 29 - Java Streams and Scenario Based Problems
+**Date:** 19-Jan-2026
+- Learn and Solved problem based on Java Streams
+- Solved 2 scenario-based problems in oops
+- Solved 3 scenario-based problems in data structure
+- Improved design & problem-solving skills
+
+🔗 Code Link: 
+- [scenario-based-codebase](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/dsa-practice/dsa-practice/scenario-based-codebase/scenariocodebase/src/com)
+- [Scenario-Code-Base](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java-oops-pratice/java-oops-practice/scenario-based-codebase/ScenarioBasedCodebase/src/com)
+- [Java-Streams](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java-collections-practice/java-collections-practice/gcr-codebase/JavaCollections/src/com/javastreams)
+---
+### Day 30 - Java Exception and Scenario Based Problems
+**Date:** 20-Jan-2026
+- Learn and Solved problems based on Java Exception
+- Solved 3 scenario-based problems in data structure
+- Improved design & problem-solving skills
+
+🔗 Code Link: 
+- [scenario-based-codebase](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/dsa-practice/dsa-practice/scenario-based-codebase/scenariocodebase/src/com)
+---
+### Day 31 - Scenario Based Problems
+**Date:** 21-Jan-2026
+- Solved 3 scenario-based problems in data structure
+- Improved design & problem-solving skills
+
+🔗 Code Link: 
+- [scenario-based-codebase](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/dsa-practice/dsa-practice/scenario-based-codebase/scenariocodebase/src/com)
 ---
