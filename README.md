@@ -16,7 +16,7 @@ Each day includes:
 - Improved design & problem-solving skills
 
 🔗 Code Link:  
-- [java-collections-practice](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java-collections-practice/java-collections-practice/gcr-codebase/JavaCollections/src/com/javagenerics)
+- [java-generics](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java-collections-practice/java-collections-practice/gcr-codebase/JavaCollections/src/com/javagenerics)
 ---
 ### Day 27 – BST and Graph  
 **Date:** 16-Jan-2025  
@@ -32,7 +32,7 @@ Each day includes:
 - Improved design & problem-solving skills
 
 🔗 Code Link:  
-- [java-collections-practice](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java-collections-practice/java-collections-practice/gcr-codebase/JavaCollections/src/com/collections)
+- [java-collections](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java-collections-practice/java-collections-practice/gcr-codebase/JavaCollections/src/com/collections)
 ---
 ### Day 29 – Java Streams  
 **Date:** 19-Jan-2025  
@@ -40,7 +40,7 @@ Each day includes:
 - Improved design & problem-solving skills
 
 🔗 Code Link:  
-- [java-collections-practice](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java-collections-practice/java-collections-practice/gcr-codebase/JavaCollections/src/com/javastreams)
+- [java-Stream](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java-collections-practice/java-collections-practice/gcr-codebase/JavaCollections/src/com/javastreams)
 ---
 ### Day 30 – Java Exceptions  
 **Date:** 20-Jan-2025  
@@ -57,3 +57,4 @@ Each day includes:
 
 🔗 Code Link:  
 - [java-collections-practice]()
+---
