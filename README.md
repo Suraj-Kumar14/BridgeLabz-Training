@@ -42,11 +42,3 @@ Each day includes:
 🔗 Code Link:  
 - [java-collections-practice]()
 ---
-//### Day 30 – Regex & Junit  
-//**Date:** 21-Jan-2025  
-//- Learn and Solved Problem based on Regex & Junit
-//- Improved design & problem-solving skills
-
-//🔗 Code Link:  
-//- [java-collections-practice]()
-//---
