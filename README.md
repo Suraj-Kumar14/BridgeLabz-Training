@@ -18,16 +18,8 @@ Each day includes:
 🔗 Code Link:  
 - [java-generics](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java-collections-practice/java-collections-practice/gcr-codebase/JavaCollections/src/com/javagenerics)
 ---
-### Day 27 – BST and Graph  
-**Date:** 16-Jan-2025  
-- Learn about Binary search tree and Graph
-- Improved design & problem-solving skills
-
-🔗 Code Link:  
-- [java-collections-practice]()
----
 ### Day 28 – Java Collections  
-**Date:** 17-Jan-2025  
+**Date:** 16-Jan-2025  
 - Learn and Solved Problem based on Java Collections
 - Improved design & problem-solving skills
 
