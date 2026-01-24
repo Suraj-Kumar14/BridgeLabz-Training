@@ -8,7 +8,7 @@ public class ReadAndWriteTextFile {
 
 	public static void main(String[] args) throws IOException {
 		
-		String text="C:\\Users\\suraj\\OneDrive\\Documents\\input.txt";
+		
 		
 		BufferedReader reader=new BufferedReader(new InputStreamReader(System.in));
 		System.out.print("Name: ");
