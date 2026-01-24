@@ -8,8 +8,7 @@ public class ReadAndWriteTextFile {
 
 	public static void main(String[] args) throws IOException {
 		
-		
-		
+				
 		BufferedReader reader=new BufferedReader(new InputStreamReader(System.in));
 		System.out.print("Name: ");
 		String name=reader.readLine();
