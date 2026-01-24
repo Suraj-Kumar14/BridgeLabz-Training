@@ -20,7 +20,7 @@ public class ReadAndWriteTextFile {
 		System.out.print("Enter college: ");
 		String college=reader.readLine();
 		
-		FileOutputStream filepath = new FileOutputStream("textFiles/text.txt");
+		FileOutputStream filepath = new FileOutputStream("textFiles/read.txt");
 		
 		try (BufferedWriter w = new BufferedWriter(new OutputStreamWriter(filepath))){
 			w.write(name);
