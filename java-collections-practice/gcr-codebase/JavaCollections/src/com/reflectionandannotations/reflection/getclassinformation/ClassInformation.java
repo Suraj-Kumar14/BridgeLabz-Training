@@ -7,8 +7,8 @@ import java.lang.reflect.Method;
 public class ClassInformation {
 
 	public static void main(String[] args) {
-		Person person=new Person("Arjun",30);
-		String className="com.reflectionandannotations.reflection.getclassinformation.Person";
+
+		String className="java.lang.Math";
 		
 		try {
 			
