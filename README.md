@@ -111,6 +111,14 @@ This repository tracks my daily learning journey during the BridgeLabz Java Full
 ---
 ### Day 30 - Scenario Based Problems
 **Date:** 21-Jan-2026
+- Solved 2 scenario based problem 
+- Improved design & problem-solving skills
+
+🔗 Code Link: 
+- [scenario-based-codebase](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/dsa-practice/dsa-practice/scenario-based-codebase/scenariocodebase/src/com)
+---
+### Day 30 - Scenario Based Problems
+**Date:** 22-Jan-2026
 - Solved 3 scenario based problem 
 - Improved design & problem-solving skills
 
