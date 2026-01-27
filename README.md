@@ -276,3 +276,50 @@
 🔗 Code Link: 
 - [scenario-based-codebase](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/dsa-practice/dsa-practice/scenario-based-codebase/scenariocodebase/src/com)
 ---
+### Day 32 – Scenario Based Problems & Annotations and Reflection
+**Date:** 22-Jan-2026  
+- Solved Problem based on Java Annotations and Reflection
+- Solved 2 scenario-based problems based on tree in `dsa-practice`
+- Improved design and problem-solving skills  
+
+🔗 Code Link:  
+- [Scenario Code Base(DSA)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/dsa-practice/dsa-practice/scenario-based-codebase/scenariocodebase/src/com)
+- [java-collections-practice(annotations)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java-collections-practice/java-collections-practice/gcr-codebase/JavaCollections/src/com/reflectionandannotations/annotations)
+- [java-collections-practice(reflections)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java-collections-practice/java-collections-practice/gcr-codebase/JavaCollections/src/com/reflectionandannotations/reflection)
+---
+## 🗓️ Week 5 – Java IO Progamming
+**Focus:** CSV File Handling and JSON
+---
+### Day 33 – Scenario Based Problems and CSV Handling
+**Date:** 23-Jan-2026  
+- Solved Scenario based problem in `java-collections-practice`
+- Solved Problem on `CSV Hanldings`
+- Created new branch `java-iostreams-practice`  
+- Improved design and problem-solving skills  
+
+🔗 Code Link:  
+- [java-iostreams-practice](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java-iostreams-practice/java-iostreams-practice/gcr-codebase/IOconcepts/src/com/csvfile)
+- [Scenario Code Base(collections)]()
+---
+### Day 34 – JSON Data
+**Date:** 24-Jan-2026  
+- Solved Collections Problems based `JSON`
+- Improved design and problem-solving skills  
+
+🔗 Code Link:  
+- [java-iostreams-practice](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java-iostreams-practice/java-iostreams-practice/gcr-codebase/IOconcepts/src/com/json)
+---
+## 🗓️ Week 6 – Java 8 Features
+**Focus:** Lambda Expression and Function Interfaces
+---
+### Day 35 – Java 8 & It's Features
+**Date:** 27-Jan-2026  
+- Create new branch `java8-programmming-practice`
+- Solved Collections Problems based on Lambda Expressions
+- Solved Collections Problems based on Functional Interfaces
+- Improved design and problem-solving skills  
+
+🔗 Code Link:  
+- [java8-programmming-practice(Lambda Expressions)]()
+- [java8-programmming-practice(Functional Interfaces)]()
+---
