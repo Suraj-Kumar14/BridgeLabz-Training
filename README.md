@@ -27,7 +27,7 @@ Each day includes:
 - [java-iostreams-practice](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java-iostreams-practice/java-iostreams-practice/gcr-codebase/IOconcepts/src/com/json)
 ---
 ### Day 35 – Scenario-based problems
-**Date:** 24-Jan-2026  
+**Date:** 27-Jan-2026  
 - Solved scenario based Problems based on the io-Streams 
 - Improved design and problem-solving skills  
 
