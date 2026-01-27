@@ -8,6 +8,7 @@ public class WriteDataToCSVFile {
 		
 		try(FileWriter w=new FileWriter("DataFiles/employees.csv")){
 			
+			w.append("ID,Name,Department,Salary\n");
 			w.append("101,Allu,IT,25000\n");
 			w.append("102,Sonu,HR,45000\n");
 			w.append("103,Monu,Finance,35000\n");
