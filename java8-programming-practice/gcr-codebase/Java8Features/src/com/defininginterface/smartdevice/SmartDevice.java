@@ -1,4 +1,4 @@
-package com.defininginterface.implementinginterface;
+package com.defininginterface.smartdevice;
 
 public interface SmartDevice {
 	void turnOn();
