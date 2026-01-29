@@ -320,6 +320,14 @@
 - Improved design and problem-solving skills  
 
 🔗 Code Link:  
-- [java8-programmming-practice(Lambda Expressions)]()
+- [java8-programmming-practice(Lambda Expressions)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java8-programming-practice/java8-programming-practice/gcr-codebase/Java8Features/src/com/lamdaexpression)
 - [java8-programmming-practice(Functional Interfaces)]()
+---
+### Day 36 – Scenario Based Problems
+**Date:** 28-Jan-2026  
+- Solved Sceanrio based question in Stream API
+- Improved design and problem-solving skills  
+
+🔗 Code Link:  
+- [java8-programmming-practice(scenario)]()
 ---
