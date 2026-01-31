@@ -1,4 +1,4 @@
-package com.interfacepractice.markerinterface;
+package com.interfacepractice.markerinterface.dataserialization;
 
 public class Main {
 
