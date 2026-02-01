@@ -16,7 +16,7 @@ public class TransactionTimestamp {
 		
 		
 		transactionId.stream()
-						.forEach(id->System.out.println(LocalDate.now()+" transaction "+id));
+						.forEach(id->System.out.println(LocalDate.now()+" - Transaction: "+id));
 
 	}
 
