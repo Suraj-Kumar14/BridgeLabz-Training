@@ -21,7 +21,7 @@ Each day includes:
 - [java8-programmming-practice(Lambda Expressions)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java8-programming-practice/java8-programming-practice/gcr-codebase/Java8Features/src/com/lamdaexpression)
 - [java8-programmming-practice(Functional Interfaces)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java8-programming-practice/java8-programming-practice/gcr-codebase/Java8Features/src/com/interfacepractice)
 ---
-### Day 35 – Scenario Based Problem
+### Day 35 – Scenario Based Problem, Stream API & Collectors
 **Date:** 28-Jan-2026  
 - Solved Stream API Problems
 - Solved Collectors Problems
