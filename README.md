@@ -321,13 +321,17 @@
 
 🔗 Code Link:  
 - [java8-programmming-practice(Lambda Expressions)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java8-programming-practice/java8-programming-practice/gcr-codebase/Java8Features/src/com/lamdaexpression)
-- [java8-programmming-practice(Functional Interfaces)]()
+- [java8-programmming-practice(Functional Interfaces)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java8-programming-practice/java8-programming-practice/gcr-codebase/Java8Features/src/com/interfacepractice)
 ---
-### Day 36 – Scenario Based Problems
+### Day 36 – Scenario Based Problems, Stream API & Collectors
 **Date:** 28-Jan-2026  
-- Solved Sceanrio based question in Stream API
+- Solved Stream API Problems
+- Solved Collectors Problems
+- Solved Sceanrio based problem in Stream API
 - Improved design and problem-solving skills  
 
 🔗 Code Link:  
-- [java8-programmming-practice(scenario)]()
+- [java8-programmming-practice(scenario)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java8-programming-practice/java8-programming-practice/scenario-based-codebase/ScenarioCodebase/src/com/scenarioquestion)
+- [java8-programmming-practice(streamAPI)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java8-programming-practice/java8-programming-practice/gcr-codebase/Java8Features/src/com/streamAPI)
+- [java8-programmming-practice(collectors)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java8-programming-practice/java8-programming-practice/gcr-codebase/Java8Features/src/com/collectors)
 ---
