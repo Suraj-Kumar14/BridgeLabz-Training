@@ -33,3 +33,19 @@ Each day includes:
 - [java8-programmming-practice(streamAPI)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java8-programming-practice/java8-programming-practice/gcr-codebase/Java8Features/src/com/streamAPI)
 - [java8-programmming-practice(collectors)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java8-programming-practice/java8-programming-practice/gcr-codebase/Java8Features/src/com/collectors)
 ---
+### Day 36 – Scenario Based Problem
+**Date:** 29-Jan-2026  
+- Solved Sceanrio based problem in Stream API
+- Improved design and problem-solving skills  
+
+🔗 Code Link:  
+- [java8-programmming-practice(scenario)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java8-programming-practice/java8-programming-practice/scenario-based-codebase/ScenarioCodebase/src/com/scenarioquestion)
+---
+### Day 37 – Scenario Based Problem
+**Date:** 30-Jan-2026  
+- Solved Sceanrio based problem in Stream API
+- Improved design and problem-solving skills  
+
+🔗 Code Link:  
+- [java8-programmming-practice(scenario)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java8-programming-practice/java8-programming-practice/scenario-based-codebase/ScenarioCodebase/src/com/scenarioquestion)
+---
