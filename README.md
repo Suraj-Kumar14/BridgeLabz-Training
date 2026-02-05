@@ -335,3 +335,65 @@
 - [java8-programmming-practice(streamAPI)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java8-programming-practice/java8-programming-practice/gcr-codebase/Java8Features/src/com/streamAPI)
 - [java8-programmming-practice(collectors)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java8-programming-practice/java8-programming-practice/gcr-codebase/Java8Features/src/com/collectors)
 ---
+### Day 37 – Scenario Based Problem
+**Date:** 29-Jan-2026  
+- Solved Sceanrio based problem in Stream API
+- Improved design and problem-solving skills  
+
+🔗 Code Link:  
+- [java8-programmming-practice(scenario)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java8-programming-practice/java8-programming-practice/scenario-based-codebase/ScenarioCodebase/src/com/scenarioquestion)
+---
+### Day 38 – Scenario Based Problem
+**Date:** 30-Jan-2026  
+- Solved Sceanrio based problem in Stream API
+- Improved design and problem-solving skills  
+
+🔗 Code Link:  
+- [java8-programmming-practice(scenario)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java8-programming-practice/java8-programming-practice/scenario-based-codebase/ScenarioCodebase/src/com/scenarioquestion)
+---
+## 🗓️ Week 07 - Solution Designing and Multithreading
+**Focus:** Design Principles, Design Patterns, and Multithreading
+---
+### Day 39 – Design Pattern and Design Principles
+**Date:** 31-Jan-2026  
+- Explored design principles (SOLID, DRY, KISS, YAGNI)
+- Understand the design patterns
+- Singleton Pattern
+- Factory Pattern
+- Observer Pattern
+- Builder Pattern
+- UML Designing
+- Improved design and problem-solving skills  
+
+🔗 Code Link:  
+- [java-design-pattern-practice](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java-design-pattern-practice/java-design-pattern-practice/gcr-code-base/JavaDesign/src/com)
+---
+### Day 40 – Java Multithreading
+**Date:** 02-Feb-2026  
+- Creating Threads Using Thread Class
+- Creating Threads Using Runnable Interface
+- Thread Class vs Runnable Interface
+- Thread Life Cycle and States
+- Thread Methods and Operations
+- Solved problems based on multithreading
+- Improved design and problem-solving skill
+
+🔗 Code Link:  
+- [java-design-pattern-practice(multithreading)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java-design-pattern-practice/java-design-pattern-practice/gcr-code-base/Multithreading/src/com)
+---
+### Day 41 – Scenario Based Problem
+**Date:** 03-Feb-2026  
+- Solved Sceanrio based problem in Multithreading
+- Improved design and problem-solving skills  
+
+🔗 Code Link:  
+- [java-design-pattern-practice(scenario)]()
+---
+### Day 42 – Scenario Based Problem
+**Date:** 04-Feb-2026  
+- Solved Sceanrio based problem in Stream API
+- Improved design and problem-solving skills  
+
+🔗 Code Link:  
+- [java8-programmming-practice(scenario)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java8-programming-practice/java8-programming-practice/scenario-based-codebase/ScenarioCodebase/src/com/scenarioquestion)
+---
