@@ -1,0 +1,140 @@
+	/*
+		Exercise 2: Transaction Management
+		Implement a banking system with:
+		• Transfer money between accounts (use transactions)
+		• Check balance
+		• Transaction history
+	*/
+	
+	--Task 0 [CREATE DATABASE]--
+	
+	CREATE DATABASE banking_db;
+	
+	use banking_db;
+	
+	 SELECT DATABASE();
+		 +------------+
+		| DATABASE() |
+		+------------+
+		| banking_db |
+		+------------+
+	 
+	 --[CREATE TABLE account]--
+	 
+	 CREATE TABLE account(
+     account_id INT PRIMARY KEY AUTO_INCREMENT,
+     account_holder VARCHAR(100),
+     balance DECIMAL(12,2)
+     );
+     
+     --[CREATE TABLE transaction_history]--
+     
+     CREATE TABLE transaction_history(
+     txn_id INT PRIMARY KEY AUTO_INCREMENT,
+     from_account INT,
+     to_account INT,
+     transfer_amount DECIMAL(12,2),
+     txn_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+     status VARCHAR(20)
+     );
+     
+     --[INSERT DATA INTO account]--
+     
+     INSERT INTO account(account_holder,balance)
+     VALUES
+     ('Suraj Kumar',50000),
+     ('Amit Raj',30000),
+     ('Kunal Singh',40000);
+     
+      SELECT *FROM account;
+      
+        +------------+----------------+----------+
+		| account_id | account_holder | balance  |
+		+------------+----------------+----------+
+		|          1 | Suraj Kumar    | 50000.00 |
+		|          2 | Amit Raj       | 30000.00 |
+		|          3 | Kunal Singh    | 40000.00 |
+		+------------+----------------+----------+
+      
+      --Task 1 [ Transfer money between accounts]
+      
+      step:-1 Deduct money from sender account
+      
+      UPDATE account 
+      SET balance=balance-5000
+      WHERE account_id=1;
+      
+      SELECT * FROM account;
+        +------------+----------------+----------+
+    	| account_id | account_holder | balance  |
+		+------------+----------------+----------+
+		|          1 | Suraj Kumar    | 45000.00 |
+		|          2 | Amit Raj       | 30000.00 |
+		|          3 | Kunal Singh    | 40000.00 |
+		+------------+----------------+----------+
+      
+      step:-2 Credit money to receiver account
+      
+      UPDATE account
+      SET balance=balance+5000
+      WHERE account_id=2;
+      
+      SELECT * FROM account;
+        +------------+----------------+----------+
+		| account_id | account_holder | balance  |
+		+------------+----------------+----------+
+		|          1 | Suraj Kumar    | 45000.00 |
+		|          2 | Amit Raj       | 35000.00 |
+		|          3 | Kunal Singh    | 40000.00 |
+		+------------+----------------+----------+
+      
+      step:-3 Insert transaction data into transaction_history
+      
+       INSERT INTO transaction_history
+       (from_account, to_account, transfer_amount,status)
+       VALUES
+       (1,2,5000,'Success');
+       
+       SELECT * FROM transaction_history;
+       	+--------+--------------+------------+-----------------+---------------------+---------+
+		| txn_id | from_account | to_account | transfer_amount | txn_date            | status  |
+		+--------+--------------+------------+-----------------+---------------------+---------+
+		|      1 |            1 |          2 |         5000.00 | 2026-02-08 21:43:30 | Success |
+		+--------+--------------+------------+-----------------+---------------------+---------+
+		
+	
+	--Task 2 [Check balance]--
+	
+	 SELECT balance
+     FROM account
+     WHere account_id=3;
+     
+		+----------+
+		| balance  |
+		+----------+
+		| 40000.00 |
+		+----------+
+		
+		--Task [Transaction history]--
+		
+	-> Get all transaction history
+	
+	 SELECT * FROM transaction_history;
+	
+	+--------+--------------+------------+-----------------+---------------------+---------+
+	| txn_id | from_account | to_account | transfer_amount | txn_date            | status  |
+	+--------+--------------+------------+-----------------+---------------------+---------+
+	|      1 |            1 |          2 |         5000.00 | 2026-02-08 21:43:30 | Success |
+	+--------+--------------+------------+-----------------+---------------------+---------+	
+		
+		
+	-> Get specific transaction history	
+	
+     SELECT * FROM transaction_history
+     WHERE txn_id=1;
+     
+        +--------+--------------+------------+-----------------+---------------------+---------+
+		| txn_id | from_account | to_account | transfer_amount | txn_date            | status  |
+		+--------+--------------+------------+-----------------+---------------------+---------+
+		|      1 |            1 |          2 |         5000.00 | 2026-02-08 21:43:30 | Success |
+		+--------+--------------+------------+-----------------+---------------------+---------+
