@@ -1,0 +1,184 @@
+	/*
+	    Exercise 3: Advanced Features
+	    Build a library management system with:
+	    • Book inventory
+	    • Student borrowing records
+	    • Fine calculation
+	    • Search functionality with multiple filters
+   */
+   
+   Task 0 [CREATE DATABASE AND INSERT DATA INTO IT]
+   
+    CREATE DATABASE library_db;
+    USE library_db;
+    
+    --creating book table--
+     CREATE TABLE book(
+         book_id INT PRIMARY KEY AUTO_INCREMENT,
+         title VARCHAR(150),
+         author VARCHAR(100),
+         category VARCHAR(50),
+         total_copies INT,
+         available_copies INT
+     );
+     
+     DESC book;
+    +------------------+--------------+------+-----+---------+----------------+
+	| Field            | Type         | Null | Key | Default | Extra          |
+	+------------------+--------------+------+-----+---------+----------------+
+	| book_id          | int          | NO   | PRI | NULL    | auto_increment |
+	| title            | varchar(150) | YES  |     | NULL    |                |
+	| author           | varchar(100) | YES  |     | NULL    |                |
+	| category         | varchar(50)  | YES  |     | NULL    |                |
+	| total_copies     | int          | YES  |     | NULL    |                |
+	| available_copies | int          | YES  |     | NULL    |                |
+	+------------------+--------------+------+-----+---------+----------------+
+	     
+     --creating student table--
+      CREATE TABLE student(
+       student_id INT PRIMARY KEY AUTO_INCREMENT,
+       student_name VARCHAR(100),
+       department VARCHAR(50)
+     );
+     
+     DESC student;
+    +--------------+--------------+------+-----+---------+----------------+
+	| Field        | Type         | Null | Key | Default | Extra          |
+	+--------------+--------------+------+-----+---------+----------------+
+	| student_id   | int          | NO   | PRI | NULL    | auto_increment |
+	| student_name | varchar(100) | YES  |     | NULL    |                |
+	| department   | varchar(50)  | YES  |     | NULL    |                |
+	+--------------+--------------+------+-----+---------+----------------+
+	
+	
+	--insert book data--
+	
+	 INSERT INTO book (title, author, category, total_copies, available_copies) VALUES
+     ('Clean Code', 'Robert Martin', 'Programming', 5, 5),
+     ('Effective Java', 'Joshua Bloch', 'Programming', 4, 4),
+   	 ('DBMS', 'Korth', 'Database', 6, 6);
+	
+	SELECT * FROM book;
+	+---------+----------------+---------------+-------------+--------------+------------------+
+	| book_id | title          | author        | category    | total_copies | available_copies |
+	+---------+----------------+---------------+-------------+--------------+------------------+
+	|       1 | Clean Code     | Robert Martin | Programming |            5 |                5 |
+	|       2 | Effective Java | Joshua Bloch  | Programming |            4 |                4 |
+	|       3 | DBMS           | Korth         | Database    |            6 |                6 |
+	+---------+----------------+---------------+-------------+--------------+------------------+
+	
+	
+	--insert student data--
+	
+	INSERT INTO student (student_name, department) 
+	VALUES
+   	 ('Suraj Kumar', 'CSE'),
+   	 ('Amit Sharma', 'ECE');
+	
+	SELECT * FROM student;
+	+------------+--------------+------------+
+	| student_id | student_name | department |
+	+------------+--------------+------------+
+	|          1 | Suraj Kumar  | CSE        |
+	|          2 | Amit Sharma  | ECE        |
+	+------------+--------------+------------+
+	
+	
+	Task 1 [Student borrowing records]
+	
+	--creating table borrow_record--
+	
+	 CREATE TABLE borrow_record(
+     borrow_id INT PRIMARY KEY AUTO_INCREMENT,
+     student_id INT,
+     book_id INT,
+     borrow_date DATE,
+     due_date DATE,
+     return_date DATE,
+     fine DECIMAL(8,2)
+     );
+	
+	DESC borrow_record;
+	+-------------+--------------+------+-----+---------+----------------+
+	| Field       | Type         | Null | Key | Default | Extra          |
+	+-------------+--------------+------+-----+---------+----------------+
+	| borrow_id   | int          | NO   | PRI | NULL    | auto_increment |
+	| student_id  | int          | YES  |     | NULL    |                |
+	| book_id     | int          | YES  |     | NULL    |                |
+	| borrow_date | date         | YES  |     | NULL    |                |
+	| due_date    | date         | YES  |     | NULL    |                |
+	| return_date | date         | YES  |     | NULL    |                |
+	| fine        | decimal(8,2) | YES  |     | NULL    |                |
+	+-------------+--------------+------+-----+---------+----------------+
+	
+	 START TRANSACTION;
+	
+	INSERT INTO borrow_record
+     (student_id, book_id, borrow_date, due_date)
+     VALUES
+     (1, 1, CURDATE(), DATE_ADD(CURDATE(), INTERVAL 14 DAY));
+     
+      UPDATE book
+     SET available_copies = available_copies - 1
+     WHERE book_id = 1;
+     
+     COMMIT;
+     
+     SELECT * FROM borrow_record;
+        +-----------+------------+---------+-------------+------------+-------------+------+
+		| borrow_id | student_id | book_id | borrow_date | due_date   | return_date | fine |
+		+-----------+------------+---------+-------------+------------+-------------+------+
+		|         1 |          1 |       1 | 2026-02-09  | 2026-02-23 | NULL        | NULL |
+		+-----------+------------+---------+-------------+------------+-------------+------+
+     
+     
+     Task 2 [Fine calculation]
+     
+      UPDATE borrow_record
+      SET return_date=CURDATE(),
+      fine=CASE
+      WHEN CURDATE()>due_date
+      THEN DATEDIFF(CURDATE(),due_date)*5
+      ELSE 0
+      END
+      WHERE borrow_id=1;
+     
+     UPDATE book
+     SET available_copies = available_copies + 1
+     WHERE book_id = 1;
+     
+     COMMIT;
+     
+     SELECT * FROM borrow_record;
+	+-----------+------------+---------+-------------+------------+-------------+------+
+	| borrow_id | student_id | book_id | borrow_date | due_date   | return_date | fine |
+	+-----------+------------+---------+-------------+------------+-------------+------+
+	|         1 |          1 |       1 | 2026-02-09  | 2026-02-23 | 2026-02-09  | 0.00 |
+	+-----------+------------+---------+-------------+------------+-------------+------+
+     
+	--view fine--
+	SELECT s.student_name, b.title, br.fine
+	FROM borrow_record br
+	JOIN student s ON br.student_id = s.student_id
+	JOIN book b ON br.book_id = b.book_id
+	WHERE br.fine > 0;
+	
+	--Task 3 [Search functionality with multiple filters]--
+	
+	SELECT * FROM book
+	WHERE book_id=2;
+	
+	+---------+----------------+--------------+-------------+--------------+------------------+
+	| book_id | title          | author       | category    | total_copies | available_copies |
+	+---------+----------------+--------------+-------------+--------------+------------------+
+	|       2 | Effective Java | Joshua Bloch | Programming |            4 |                4 |
+	+---------+----------------+--------------+-------------+--------------+------------------+
+
+	--borrowing history
+	
+	SELECT s.student_name, b.title, br.borrow_date, br.due_date, br.return_date, br.fine
+	FROM borrow_record br
+	JOIN student s ON br.student_id = s.student_id
+	JOIN book b ON br.book_id = b.book_id;
+	
+
