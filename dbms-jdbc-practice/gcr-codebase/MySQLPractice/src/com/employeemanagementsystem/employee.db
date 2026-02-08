@@ -1,0 +1,92 @@
+	/*
+		Exercise 1: Simple CRUD Application
+		Create a console-based Employee Management System with:
+		• Add employee
+		• View all employees
+		• Update employee salary
+		• Delete employee
+		• Search employee by name
+	*/
+	
+	--Task 0 [CREATE DATABASE]--
+	
+	CREATE DATABASE employee_db;
+	USE employee_db;
+	
+	CREATE TABLE employee(emp_id INT PRIMARY KEY AUTO_INCREMENT,
+	emp_name VARCHAR(50) NOT NULL,
+	department VARCHAR(30),
+	salary Decimal(10,2)
+	);
+	
+	--Task 1 [Add employee]--
+	
+	INSERT INTO employee(emp_name,department,salary)
+			VALUES('Suraj Kumar','IT',35000),
+					('Anjali Singh','HR',28000),
+					('Ravi Kumar','Finance',30000);
+					
+	
+	--Task 2 [View all employee]--
+	
+	SELECT * FROM employee;
+	
+	/* Output Structure
+		 +--------+--------------+------------+----------+
+		| emp_id | emp_name     | department | salary   |
+		+--------+--------------+------------+----------+
+		|      1 | Suraj Kumar  | IT         | 40000.00 |
+		|      2 | Anjali Singh | HR         | 28000.00 |
+		|      3 | Ravi Kumar   | Finance    | 30000.00 |
+		+--------+--------------+------------+----------+
+	*/
+	
+	
+	--Task 3 [Update employee salary]--
+	
+		UPDATE employee 
+		SET salary=45000
+		WHERE emp_id=1;
+		
+		SELECT * FROM employee;
+	
+	/* Output Structure
+		 +--------+--------------+------------+----------+
+		| emp_id | emp_name     | department | salary   |
+		+--------+--------------+------------+----------+
+		|      1 | Suraj Kumar  | IT         | 45000.00 |
+		|      2 | Anjali Singh | HR         | 28000.00 |
+		|      3 | Ravi Kumar   | Finance    | 30000.00 |
+		+--------+--------------+------------+----------+
+	*/
+	
+	--Task 4 [Delete employee]--
+	
+	DELETE FROM employee
+	WHERE emp_id=2;
+	
+	SELECT * FROM employee;
+	
+	/* Output Structure
+		 +--------+--------------+------------+----------+
+		| emp_id | emp_name     | department | salary   |
+		+--------+--------------+------------+----------+
+		|      1 | Suraj Kumar  | IT         | 45000.00 |
+		|      3 | Ravi Kumar   | Finance    | 30000.00 |
+		+--------+--------------+------------+----------+
+	*/
+	
+	
+	--Task 5 [Search employee by name]--
+	
+	SELECT * FROM employee
+	WHERE emp_name='Suraj Kumar';
+	
+	/* Output Structure
+		 +--------+--------------+------------+----------+
+		| emp_id | emp_name     | department | salary   |
+		+--------+--------------+------------+----------+
+		|      1 | Suraj Kumar  | IT         | 45000.00 |
+		+--------+--------------+------------+----------+
+	*/
+	
