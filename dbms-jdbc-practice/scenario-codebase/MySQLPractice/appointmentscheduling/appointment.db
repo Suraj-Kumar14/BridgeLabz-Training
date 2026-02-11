@@ -1,0 +1,250 @@
+	/*
+	3. Appointment Scheduling
+	*/
+	
+	-- Task 0 [Create database and setup Tables]
+	CREATE DATABASE appointmentScheduling;
+	USE appointmentScheduling;
+	
+	--table creation
+	CREATE TABLE patients(
+	    patientId INT AUTO_INCREMENT PRIMARY KEY,
+	    patientName VARCHAR(100) NOT NULL
+	    );
+	
+	-- PROCEDURE function for adding patients
+	DELIMITER $$
+	CREATE PROCEDURE addPatients(
+	    IN p_name VARCHAR(100)
+	    )
+	    BEGIN
+	    INSERT INTO patients(patientName)
+	    VALUES(p_name);
+	    END $$
+	DELIMITER ;
+	
+	--calling addPatients function to add patient
+	CALL addPatients('aarnav');
+	CALL addPatients('ravi');
+	CALL addPatients('kali');
+	
+	SELECT * FROM patients;
+	+-----------+-------------+
+	| patientId | patientName |
+	+-----------+-------------+
+	|         1 | aarnav      |
+	|         2 | ravi        |
+	|         3 | kali        |
+	+-----------+-------------+
+	
+	-- doctors tables
+	CREATE TABLE doctors(
+	    doctorId INT AUTO_INCREMENT PRIMARY KEY,
+	    doctorName VARCHAR(100) NOT NULL,
+	    specialization VARCHAR(100) NOT NULL
+	    );
+	
+	DELIMITER $$
+	CREATE PROCEDURE addDoctors(
+	    IN d_name VARCHAR(100),
+	    IN s_name VARCHAR(100)
+	    )
+	    BEGIN
+	    INSERT INTO doctors(doctorName, specialization)
+	    VALUES (d_name, s_name);
+	    END $$
+	
+	DELIMITER ;
+	
+	CALL addDoctors('allu', 'Genereal Physician');
+	CALL addDoctors('suriya', 'Physio therapyh');
+	
+	SELECT * FROM doctors;
+	+----------+------------+--------------------+
+	| doctorId | doctorName | specialization     |
+	+----------+------------+--------------------+
+	|        1 | allu       | Genereal Physician |
+	|        2 | suriya     | Physio therapyh    |
+	|        3 | suriya     | Physio therapyh    |
+	+----------+------------+--------------------+
+	
+	ALTER TABLE doctors ADD isActive BOOLEAN;
+	
+	UPDATE doctors
+	SET isActive = true;
+	
+	SELECT * FROM doctors;
+	+----------+------------+--------------------+----------+
+	| doctorId | doctorName | specialization     | isActive |
+	+----------+------------+--------------------+----------+
+	|        1 | allu       | Genereal Physician |        1 |
+	|        2 | suriya     | Physio therapyh    |        1 |
+	|        3 | suriya     | Physio therapyh    |        1 |
+	+----------+------------+--------------------+----------+
+	
+	
+	
+	-- appointment tables 
+	CREATE TABLE appointments (
+	    appointmentId INT AUTO_INCREMENT PRIMARY KEY,
+	    doctorId INT NOT NULL,
+	    patientId INT NOT NULL,
+	    appointment_date DATE NOT NULL,
+	    status ENUM('Scheduled', 'Completed', 'Cancelled') DEFAULT 'Scheduled',
+	    FOREIGN KEY (doctorId) REFERENCES doctors(doctorId),
+	    FOREIGN KEY (patientId) REFERENCES patients(patientId)
+	    );
+	
+	DELIMITER $$
+	CREATE PROCEDURE addAppointments(
+	    IN d_Id INT,
+	    IN p_ID INT,
+	    IN a_date DATE,
+	    IN p_status ENUM('Scheduled', 'Completed', 'Cancelled')
+	    )
+	    BEGIN
+	    INSERT INTO appointments(doctorId, patientId, appointment_date, status)
+	    VALUES (d_Id, p_Id, a_date, p_status);
+	    END $$
+	DELIMITER ;
+	
+	CALL addAppointments(1,2,'2026-02-12','Scheduled');
+	CALL addAppointments(2,3,'2027-04-11','Completed');
+	
+	SELECT * FROM appointments;
+	+---------------+----------+-----------+------------------+-----------+
+	| appointmentId | doctorId | patientId | appointment_date | status    |
+	+---------------+----------+-----------+------------------+-----------+
+	|             1 |        1 |         2 | 2026-02-12       | Scheduled |
+	|             2 |        2 |         3 | 2027-04-11       | Completed |
+	+---------------+----------+-----------+------------------+-----------+
+	
+	/*
+	UC-3.1: Book New Appointment
+	Actor: Receptionist
+	Flow: Select patient and doctor, check availability using SELECT with date/time constraints. Insert into appointments table with status='SCHEDULED'. Use PreparedStatement to prevent SQL injection.
+	*/
+	
+	CREATE PROCEDURE bookAppointment(
+	    IN p_doctorId INT,
+	    IN p_patientId INT,
+	    IN p_date DATE
+	    )
+	    BEGIN
+	        DECLARE appointmentCount INT;
+	    SELECT COUNT(*)
+	    INTO appointmentCount
+	    FROM appointments
+	    WHERE doctorId = p_doctorId
+	    AND appointment_date = p_date
+	    AND status = 'Scheduled';
+	
+	    IF appointmentCount < 5 THEN
+	        INSERT INTO appointments(doctorId, patientId, appointment_date, status)
+	        VALUES (p_doctorId, p_patientId, p_date, 'Scheduled');
+	    ELSE
+	        SELECT 'Doctor not available on this date' AS message;
+	    END IF;
+	END $$
+	
+	DELIMITER ;
+	CALL bookAppointment(3,1,'2028-01-12');
+	
+	SELECT * FROM appointments;
+	+---------------+----------+-----------+------------------+-----------+
+	| appointmentId | doctorId | patientId | appointment_date | status    |
+	+---------------+----------+-----------+------------------+-----------+
+	|             1 |        3 |         2 | 2030-04-10       | Scheduled |
+	|             2 |        2 |         3 | 2027-04-11       | Completed |
+	|             3 |        3 |         1 | 2028-01-12       | Scheduled |
+	+---------------+----------+-----------+------------------+-----------+
+	
+	/*
+	UC-3.2: Check Doctor Availability
+	Actor: Receptionist
+	Flow: Query appointments table with WHERE clause for doctor_id and date. Use GROUP BY and COUNT to show slot-wise bookings against max capacity.
+	*/
+	
+	SELECT
+	    doctorId,
+	    appointment_date,
+	    COUNT(*) AS totalBookings
+	    FROM appointments
+	    WHERE doctorId = 3
+	    AND appointment_date = '2030-04-10'
+	    AND status = 'Scheduled'
+	    GROUP BY doctorId, appointment_date;
+	+----------+------------------+---------------+
+	| doctorId | appointment_date | totalBookings |
+	+----------+------------------+---------------+
+	|        3 | 2030-04-10       |             3 |
+	+----------+------------------+---------------+
+	
+	/*
+	UC-3.3: Cancel Appointment
+	Actor: Receptionist/Patient
+	Flow: Update appointment status to 'CANCELLED' using UPDATE statement. Execute within transaction to log cancellation in appointment_audit table.
+	*/
+	
+	UPDATE appointments
+	    SET status = 'Cancelled'
+	    WHERE patientId = 2;
+	
+	SELECT * FROM appointments;
+	+---------------+----------+-----------+------------------+-----------+
+	| appointmentId | doctorId | patientId | appointment_date | status    |
+	+---------------+----------+-----------+------------------+-----------+
+	|             1 |        1 |         2 | 2026-02-12       | Cancelled |
+	|             2 |        2 |         3 | 2027-04-11       | Completed |
+	+---------------+----------+-----------+------------------+-----------+
+	
+	/*
+	UC-3.4: Reschedule Appointment
+	Actor: Receptionist
+	Flow: Verify new slot availability, update appointment date/time and doctor_id if needed. Use transaction with ROLLBACK capability if conflicts detected.
+	*/
+	
+	START TRANSACTION;
+	
+	UPDATE appointments
+	    SET doctorId = 3,
+	    status = 'Scheduled',
+	    appointment_date = '2030-04-10'
+	    WHERE patientId = 2;
+	
+	-- if everything looks good then do it
+	COMMIT;
+	
+	-- OR if problem then do it
+	-- ROLLBACK;
+	
+	SELECT * FROM appointments;
+	+---------------+----------+-----------+------------------+-----------+
+	| appointmentId | doctorId | patientId | appointment_date | status    |
+	+---------------+----------+-----------+------------------+-----------+
+	|             1 |        3 |         2 | 2030-04-10       | Scheduled |
+	|             2 |        2 |         3 | 2027-04-11       | Completed |
+	+---------------+----------+-----------+------------------+-----------+
+	
+	/*
+	UC-3.5: View Daily Appointment Schedule
+	Actor: Doctor/Receptionist
+	Flow: Execute multi-table JOIN (appointments, patients, doctors) filtered by date. Order by appointment_time using ORDER BY clause.
+	*/
+	
+	SELECT
+	    a.appointmentId,
+	    d.doctorName,
+	    p.patientName,
+	    a.appointment_date,
+	    -> a.status
+	    -> FROM appointments a
+	    -> JOIN doctors d ON a.doctorId = d.doctorId
+	    -> JOIN patients p ON a.patientId = p.patientId
+	    -> WHERE a.appointment_date = '2030-04-10'
+	    -> ORDER BY d.doctorName;
+	+---------------+------------+-------------+------------------+-----------+
+	| appointmentId | doctorName | patientName | appointment_date | status    |
+	+---------------+------------+-------------+------------------+-----------+
+	|             1 | suriya     | ravi        | 2030-04-10       | Scheduled |
+	+---------------+------------+-------------+------------------+-----------+
