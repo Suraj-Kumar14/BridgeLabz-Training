@@ -392,8 +392,57 @@
 ### Day 42 – Scenario Based Problem
 **Date:** 04-Feb-2026  
 - Solved Sceanrio based problem in Stream API
+- Java 8 Logical Questions performing Stream API on strings
 - Improved design and problem-solving skills  
 
 🔗 Code Link:  
 - [java8-programmming-practice(scenario)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java8-programming-practice/java8-programming-practice/scenario-based-codebase/ScenarioCodebase/src/com/scenarioquestion)
+---
+### Day 43 – Scenario Based Problem
+**Date:** 05-Feb-2026  
+- Solved Sceanrio based problem in Stream API
+-  Predicate (Condition Checking)
+- Function (Data Transformation)
+- Consumer (Perform Action)
+- Supplier (Provide Data)
+- Improved design and problem-solving skills  
+
+🔗 Code Link:  
+- [java8-programmming-practice(scenario)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/java8-programming-practice/java8-programming-practice/scenario-based-codebase/ScenarioCodebase/src/com/scenarioquestion)
+---
+## 🗓️ Week 08 - MySQL & JDBC
+**Focus:** MySQL, and JDBC
+---
+### Day 44 - MySQL
+**Date:** 06-Feb-2026  
+- Create new branch `jdbc-jdbc-practice`
+- Practice these excerise
+- Exercise 1: Simple CRUD Application
+- Exercise 2: Transaction Management
+- Exercise 3: Build a Library Management System
+- Improved design and problem-solving skills  
+
+🔗 Code Link:  
+- [dbms-jdbc-practice(mysql)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/dbms-jdbc-practice/dbms-jdbc-practice/gcr-codebase/MySQLPractice/src/com)
+---
+### Day 45 - Scenario Based Problem (MySql)
+**Date:** 7-Feb-2026  
+- Solved These Problems on mysql terminal
+- Patient Management
+- Doctor Management
+- Appointment Scheduling
+- Improved design and problem-solving skills  
+
+🔗 Code Link:  
+- [dbms-jdbc-practice(mysql)](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/dbms-jdbc-practice/dbms-jdbc-practice/scenario-codebase/MySQLPractice)
+---
+### Day 45 - JDBC
+**Date:** 9-Feb-2026  
+- Establishing Database Connection
+- CRUD Operations
+- PreparedStatement
+- Improved design and problem-solving skills  
+
+🔗 Code Link:  
+- [dbms-jdbc-practice(mysql)]()
 ---
