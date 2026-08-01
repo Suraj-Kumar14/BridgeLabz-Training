@@ -22,6 +22,6 @@
 - Perform CRUD Operations using DDL and DML
 - Created HealthClinicDB database
 
-### Code Link : (https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/Refresher-Training/Day-1)
+### Code Link : [Day-1](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/Refresher-Training/Day-1)
 
 ---
