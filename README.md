@@ -39,10 +39,10 @@
 - Understood one-to-one, one-to-many, and many-to-many relationships
 - Learned database indexing concepts and their impact on query performance
 - Studied Normalization techniques:
-- First Normal Form (1NF)
-- Second Normal Form (2NF)
-- Third Normal Form (3NF)
-- Boyce-Codd Normal Form (BCNF)
+  - First Normal Form (1NF)
+  - Second Normal Form (2NF)
+  - Third Normal Form (3NF)
+  - Boyce-Codd Normal Form (BCNF)
 
 - Finalized the ER Diagram for the Health Clinic Application
 - Normalized the Patient, Doctor, Department, and Appointment schema to reduce redundancy and improve data integrity
