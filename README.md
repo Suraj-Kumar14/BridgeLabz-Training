@@ -25,3 +25,37 @@
 ### Code Link : [Day-1](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/Refresher-Training/Day-1)
 
 ---
+
+### Day 2: ER Diagrams, Junction Tables, and Database Normalization
+
+**Date:** 03-Aug-2026
+
+- **Focus Area:** Entity-Relationship (ER) Diagrams, Many-to-Many Relationships, Data Anomalies, and Normalization up to Third Normal Form (3NF).
+
+#### Core Concepts Covered
+
+- Learned ER Diagram (ERD) design principles
+- Studied entities, attributes, relationships, and cardinality
+- Understood one-to-one, one-to-many, and many-to-many relationships
+- Learned database indexing concepts and their impact on query performance
+- Studied Normalization techniques:
+- First Normal Form (1NF)
+- Second Normal Form (2NF)
+- Third Normal Form (3NF)
+- Boyce-Codd Normal Form (BCNF)
+
+- Finalized the ER Diagram for the Health Clinic Application
+- Normalized the Patient, Doctor, Department, and Appointment schema to reduce redundancy and improve data integrity
+
+### Practical Work
+
+- Designed the ER Diagram for the Health Clinic Application
+- Defined Primary Keys and Foreign Keys to establish table relationships
+- Implemented proper entity relationships with correct cardinality
+- Created and verified the database schema using ER modeling tools
+- Applied normalization up to 3NF to eliminate redundancy and update anomalies
+- Practice Constraints and Aggregate method in Health clinic practice work
+
+### Code Link : [Day-2](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/Refresher-Training/Day-2)
+
+---
