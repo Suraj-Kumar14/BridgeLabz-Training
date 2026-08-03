@@ -32,7 +32,7 @@
 
 - **Focus Area:** Entity-Relationship (ER) Diagrams, Many-to-Many Relationships, Data Anomalies, and Normalization up to Third Normal Form (3NF).
 
-#### Core Concepts Covered
+### Core Concepts Covered
 
 - Learned ER Diagram (ERD) design principles
 - Studied entities, attributes, relationships, and cardinality
