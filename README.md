@@ -86,6 +86,6 @@
 - Gained hands-on experience with SQL joins for combining data from multiple tables
 - Improved practical SQL skills by implementing real-world database scenarios
 
-### Code Link : [Day-2](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/Refresher-Training/Day-3)
+### Code Link : [Day-3](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/Refresher-Training/Day-3)
 
 ---
