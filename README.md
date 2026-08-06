@@ -141,11 +141,11 @@ Completed a console-based **Health Clinic Management System** using **Java, JDBC
 
 ---
 
-# Day 5 – Tomcat, Servlets & Spring Introduction
+## Day 5 – Tomcat, Servlets & Spring Introduction
 
 **Date:** 06-August-2026
 
-## Topics Covered
+### Topics Covered
 
 - Introduction to Backend Development
 - Apache Tomcat
@@ -159,13 +159,13 @@ Completed a console-based **Health Clinic Management System** using **Java, JDBC
 - Spring IoC Container
 - Beans in Spring
 
-## Hands-on
+### Hands-on
 
 - Created a simple Spring Core project.
 - Explored the Spring IoC Container.
 - Implemented a simple Bean using Dependency Injection.
 
-## Technologies Used
+### Technologies Used
 
 - Java
 - Apache Tomcat
@@ -174,7 +174,7 @@ Completed a console-based **Health Clinic Management System** using **Java, JDBC
 - Maven
 - Eclipse IDE
 
-## Learning Outcome
+### Learning Outcome
 
 - Understood the role of Tomcat as a web/application server.
 - Learned the Servlet lifecycle and request handling.
