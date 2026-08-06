@@ -140,3 +140,48 @@ Completed a console-based **Health Clinic Management System** using **Java, JDBC
 ### Code Link : [Day-4](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/Refresher-Training/Day-4)
 
 ---
+
+# Day 5 – Tomcat, Servlets & Spring Introduction
+
+**Date:** 06-August-2026
+
+## Topics Covered
+
+- Introduction to Backend Development
+- Apache Tomcat
+- Tomcat as a Web/Application Server
+- Servlet Architecture
+- Servlet Lifecycle
+- Introduction to Spring Framework
+- Spring Core
+- Inversion of Control (IoC)
+- Dependency Injection (DI) Basics
+- Spring IoC Container
+- Beans in Spring
+
+## Hands-on
+
+- Created a simple Spring Core project.
+- Explored the Spring IoC Container.
+- Implemented a simple Bean using Dependency Injection.
+
+## Technologies Used
+
+- Java
+- Apache Tomcat
+- Servlet API
+- Spring Framework
+- Maven
+- Eclipse IDE
+
+## Learning Outcome
+
+- Understood the role of Tomcat as a web/application server.
+- Learned the Servlet lifecycle and request handling.
+- Understood Spring Framework fundamentals.
+- Explored IoC and Dependency Injection concepts.
+- Created and managed Spring Beans using the IoC container.
+
+### Code Link : [Day-5](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/Refresher-Training/Day-5)
+
+---
