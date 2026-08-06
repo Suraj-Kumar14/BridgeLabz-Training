@@ -89,3 +89,54 @@
 ### Code Link : [Day-3](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/Refresher-Training/Day-3)
 
 ---
+
+## Day 4 – JDBC & Health Clinic App Completion
+
+**Date:** 05-August-2026
+
+### Topics Covered
+
+- JDBC Introduction
+- Connecting Java Application to MySQL
+- CRUD Operations using JDBC
+- PreparedStatement & CallableStatement
+- ResultSet & ResultSetMetaData
+- Batch Processing
+- Transactions (Commit & Rollback)
+
+### Health Clinic App
+
+Completed a console-based **Health Clinic Management System** using **Java, JDBC, and MySQL** with the following modules:
+
+- Patient Management
+- Doctor Management
+- Department Management
+- Appointment Management
+- Visit Management
+- Billing Management
+
+### JDBC Features Implemented
+
+- Database Connection
+- CRUD Operations
+- Stored Procedures
+- Transactions
+
+### Technologies Used
+
+- Java
+- JDBC
+- MySQL
+- Eclipse IDE
+
+## Learning Outcome
+
+- Connected Java with MySQL using JDBC.
+- Performed CRUD operations on database tables.
+- Executed stored procedures using `CallableStatement`.
+- Implemented batch processing and transactions.
+- Built a complete console-based Health Clinic Management System.
+
+### Code Link : [Day-4](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/Refresher-Training/Day-4)
+
+---
