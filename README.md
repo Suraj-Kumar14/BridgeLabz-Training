@@ -185,3 +185,51 @@ Completed a console-based **Health Clinic Management System** using **Java, JDBC
 ### Code Link : [Day-5](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/Refresher-Training/Day-5)
 
 ---
+
+## Day 6 - Backend Basics: Spring MVC
+
+**Date:** 07-August-2026
+
+### 📌 Topics Covered
+
+- Spring MVC Architecture
+- DispatcherServlet
+- Controllers
+- Views (JSP)
+- Request Mapping and Handling
+- MVC Request Flow
+
+### 💻 Hands-on Project
+
+#### Login & Registration System
+
+A simple Spring MVC web application that demonstrates:
+
+- User Registration
+- User Login
+- Form Handling
+- Request Mapping using Controllers
+- Passing Data from Controller to View
+- JDBC Integration with MySQL
+
+#### 🛠 Technologies Used
+
+- Java 17
+- Spring MVC
+- Apache Tomcat
+- Maven
+- MySQL
+- Spring JDBC
+- JSP
+- HTML & CSS
+
+#### 🎯 Learning Outcome
+
+- Understood Spring MVC architecture.
+- Learned request mapping and controller handling.
+- Built a Login & Registration application using Spring MVC and MySQL.
+
+### Code Link : [Day-6](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/Refresher-Training/Day-6)
+
+```
+
