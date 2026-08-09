@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Registration</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            width: 400px;
+            margin: 50px auto;
+            padding: 25px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px #ccc;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0 15px 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .error {
+            color: red;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .login-link {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+<div class="container">
+
+    <h2>Create Account</h2>
+
+
+    <!-- Registration Error -->
+
+    <p class="error"
+       th:if="${error}"
+       th:text="${error}">
+    </p>
+
+
+    <!-- Registration Form -->
+
+    <form th:action="@{/register}" method="post">
+
+
+        <!-- Name -->
+
+        <label>Name</label>
+
+        <input
+            type="text"
+            name="name"
+            placeholder="Enter your name"
+            required>
+
+
+        <!-- Email -->
+
+        <label>Email</label>
+
+        <input
+            type="email"
+            name="email"
+            placeholder="Enter your email"
+            required>
+
+
+        <!-- Password -->
+
+        <label>Password</label>
+
+        <input
+            type="password"
+            name="password"
+            placeholder="Minimum 8 characters"
+            required>
+
+
+        <!-- Mobile -->
+
+        <label>Mobile</label>
+
+        <input
+            type="text"
+            name="mobile"
+            placeholder="Enter mobile number"
+            required>
+
+
+        <!-- City -->
+
+        <label>City</label>
+
+        <input
+            type="text"
+            name="city"
+            placeholder="Enter city"
+            required>
+
+
+        <!-- Register Button -->
+
+        <button type="submit">
+            Register
+        </button>
+
+    </form>
+
+
+    <!-- Login Link -->
+
+    <div class="login-link">
+
+        Already have an account?
+
+        <a th:href="@{/login}">
+            Login
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

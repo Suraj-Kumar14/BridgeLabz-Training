@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Login</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            width: 400px;
+            margin: 80px auto;
+            padding: 25px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px #ccc;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0 15px 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #2196F3;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #1976D2;
+        }
+
+        .error {
+            color: red;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .success {
+            color: green;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .register-link {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+<div class="container">
+
+    <h2>Login</h2>
+
+
+    <!-- Login Error -->
+
+    <p class="error"
+       th:if="${error}"
+       th:text="${error}">
+    </p>
+
+
+    <!-- Registration Success Message -->
+
+    <p class="success"
+       th:if="${message}"
+       th:text="${message}">
+    </p>
+
+
+    <!-- Login Form -->
+
+    <form th:action="@{/login}" method="post">
+
+
+        <!-- Email -->
+
+        <label>Email</label>
+
+        <input
+            type="email"
+            name="email"
+            placeholder="Enter your email"
+            required>
+
+
+        <!-- Password -->
+
+        <label>Password</label>
+
+        <input
+            type="password"
+            name="password"
+            placeholder="Enter your password"
+            required>
+
+
+        <!-- Login Button -->
+
+        <button type="submit">
+            Login
+        </button>
+
+    </form>
+
+
+    <!-- Registration Link -->
+
+    <div class="register-link">
+
+        Don't have an account?
+
+        <a th:href="@{/register}">
+            Register
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

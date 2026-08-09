@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Home</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            width: 500px;
+            margin: 80px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px #ccc;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .user-info {
+            margin-top: 25px;
+            text-align: left;
+            background-color: #f8f8f8;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .user-info p {
+            margin: 10px 0;
+        }
+
+        .logout {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 25px;
+            background-color: #f44336;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        .logout:hover {
+            background-color: #d32f2f;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+<div class="container">
+
+    <h1>Welcome!</h1>
+
+    <p>You have successfully logged in.</p>
+
+
+    <!-- User Information -->
+
+    <div class="user-info">
+
+        <h3>User Details</h3>
+
+        <p>
+            <strong>Name:</strong>
+            <span th:text="${user.name}"></span>
+        </p>
+
+        <p>
+            <strong>Email:</strong>
+            <span th:text="${user.email}"></span>
+        </p>
+
+        <p>
+            <strong>Mobile:</strong>
+            <span th:text="${user.mobile}"></span>
+        </p>
+
+        <p>
+            <strong>City:</strong>
+            <span th:text="${user.city}"></span>
+        </p>
+
+    </div>
+
+
+    <!-- Back to Login -->
+
+    <a class="logout" th:href="@{/login}">
+        Logout
+    </a>
+
+</div>
+
+</body>
+
+</html>
