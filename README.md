@@ -231,5 +231,68 @@ A simple Spring MVC web application that demonstrates:
 
 ### Code Link : [Day-6](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/Refresher-Training/Day-6)
 
-```
+---
 
+## Day 7 - Spring REST API & Request Handling
+
+**Date:** 10-August-2026
+
+### Topics
+
+- Spring REST API
+- RESTful Endpoints
+- Request Handling
+- H2 In-Memory Database
+- Entity, DTO and Mapper
+- Repository and Service
+- CRUD Operations
+- Distributed Architecture
+- Postman Testing
+
+### Contacts App
+
+Developed a Contacts REST API using Spring Boot.
+
+Contact fields:
+
+- ID
+- Name
+- Phone
+- Email
+- Address
+
+### REST Endpoints
+
+| Operation | Method | URL            |
+| --------- | ------ | -------------- |
+| Create    | POST   | /contacts      |
+| Get All   | GET    | /contacts      |
+| Get By ID | GET    | /contacts/{id} |
+| Update    | PUT    | /contacts/{id} |
+| Delete    | DELETE | /contacts/{id} |
+
+### H2 Database
+
+Used H2 in-memory database for storing and testing contact data.
+
+### Postman
+
+All CRUD APIs were tested using Postman.
+
+### Technologies
+
+- Java 17
+- Spring Boot
+- Spring Web
+- Spring Data JPA
+- H2
+- Maven
+- Postman
+
+### Distributed Architecture
+
+Distributed architecture divides an application into independent services.
+
+### Code Link : [Day-7](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/Refresher-Training/Day-7)
+
+---
