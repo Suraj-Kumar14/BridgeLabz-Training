@@ -296,3 +296,132 @@ Distributed architecture divides an application into independent services.
 ### Code Link : [Day-7](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/Refresher-Training/Day-7)
 
 ---
+
+## Day 8 - API Testing Tools & SDLC
+
+**Date:** 10-August-2026
+
+### Topics Covered
+
+- REST Assured
+- JSON Server
+- REST API Testing
+- API Mocking
+- Software Development Life Cycle (SDLC)
+- Backend Developer Role in SDLC
+- Contacts App API Testing
+
+### Contacts App
+
+The Contacts App backend was continued and REST APIs were tested using REST Assured.
+
+The application supports:
+
+- Create Contact
+- Get All Contacts
+- Get Contact By ID
+- Update Contact
+- Delete Contact
+- Validation
+- Global Exception Handling
+
+## REST Endpoints
+
+| Operation         | Method | Endpoint       |
+| ----------------- | ------ | -------------- |
+| Create Contact    | POST   | /contacts      |
+| Get All Contacts  | GET    | /contacts      |
+| Get Contact By ID | GET    | /contacts/{id} |
+| Update Contact    | PUT    | /contacts/{id} |
+| Delete Contact    | DELETE | /contacts/{id} |
+
+## REST Assured
+
+REST Assured is a Java library used for testing REST APIs.
+
+Basic testing flow:
+
+    given()
+       |
+       v
+    when()
+       |
+       v
+    then()
+
+REST Assured was used to test the Contacts App API endpoints and verify the API responses and status codes.
+
+### JSON Server
+
+JSON Server is used to create mock REST APIs using JSON data.
+
+It is useful for testing APIs when the actual backend service is not available.
+
+### SDLC
+
+SDLC stands for Software Development Life Cycle.
+
+The main phases are:
+
+    Requirement
+        |
+        v
+      Design
+        |
+        v
+    Development
+        |
+        v
+      Testing
+        |
+        v
+    Deployment
+        |
+        v
+    Maintenance
+
+## Backend Developer Role
+
+A backend developer mainly works on:
+
+- REST API development
+- Business logic
+- Database integration
+- Validation
+- Exception handling
+- API testing
+- Deployment support
+
+### API Testing
+
+The Contacts App endpoints were tested using REST Assured.
+
+Testing included:
+
+- POST API
+- GET API
+- PUT API
+- DELETE API
+- Status code verification
+- Request and response validation
+- Validation error testing
+- Exception handling testing
+
+## Technologies Used
+
+- Java 17
+- Spring Boot
+- Spring Web
+- Spring Data JPA
+- H2 Database
+- Maven
+- REST Assured
+- JSON Server
+
+## Conclusion
+
+The Contacts App was tested using REST Assured and API mocking was explored using JSON Server. SDLC phases and the role of a backend developer were also studied.
+
+### Code Link : [Day-8](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/Refresher-Training/Day-8)
+
+---
