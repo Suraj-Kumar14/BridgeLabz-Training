@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Greetings App</title>
+
+	<style>
+		body {
+			text-align: center;
+			font-family: Arial, sans-serif;
+			margin-top: 50px;
+		}
+
+		table {
+			margin: 30px auto;
+			border-collapse: collapse;
+		}
+
+		th,
+		td {
+			border: 1px solid black;
+			padding: 10px 15px;
+		}
+
+		button {
+			padding: 8px 15px;
+			margin: 5px;
+			cursor: pointer;
+		}
+
+		.greeting-message {
+			font-size: 22px;
+			font-weight: bold;
+			margin: 20px 0;
+		}
+	</style>
+</head>
+
+<body>
+
+	<h1>Welcome to Greetings App</h1>
+
+	<!-- Logged-in user's name -->
+	<p>
+		Welcome,
+		<strong th:text="${session.loggedInUser.username}"></strong>
+	</p>
+
+	<!-- Greeting message -->
+	<div class="greeting-message">
+		Good Morning! Have a wonderful day!
+	</div>
+
+	<!-- Buttons -->
+	<div>
+		<a th:href="@{/greetings/new}">
+			<button>Add Greeting</button>
+		</a>
+
+		<a th:href="@{/logout}">
+			<button>Logout</button>
+		</a>
+	</div>
+
+	<!-- Greeting table -->
+	<table>
+
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Name</th>
+				<th>Message</th>
+				<th>Actions</th>
+			</tr>
+		</thead>
+
+		<tbody>
+
+			<tr th:each="greeting : ${greetings}">
+
+				<td th:text="${greeting.id}"></td>
+
+				<td th:text="${greeting.name}"></td>
+
+				<td th:text="${greeting.message}"></td>
+
+				<td>
+
+					<a th:href="@{/greetings/edit/{id}(id=${greeting.id})}">
+						Edit
+					</a>
+
+					|
+
+					<a th:href="@{/greetings/delete/{id}(id=${greeting.id})}"
+						onclick="return confirm('Are you sure you want to delete this greeting?');">
+						Delete
+					</a>
+
+				</td>
+
+			</tr>
+
+		</tbody>
+
+	</table>
+
+</body>
+
+</html>
