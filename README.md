@@ -299,7 +299,7 @@ Distributed architecture divides an application into independent services.
 
 ## Day 8 - API Testing Tools & SDLC
 
-**Date:** 10-August-2026
+**Date:** 11-August-2026
 
 ### Topics Covered
 
