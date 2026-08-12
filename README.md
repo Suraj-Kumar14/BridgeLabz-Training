@@ -425,3 +425,60 @@ The Contacts App was tested using REST Assured and API mocking was explored usin
 ### Code Link : [Day-8](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/Refresher-Training/Day-8)
 
 ---
+
+## Day 9 - Spring Boot Fundamentals
+
+**Date:** 12-August-2026
+
+### Topics Covered
+
+- Spring Boot Fundamentals
+- Auto-Configuration
+- Spring Boot Starters
+- Embedded Server
+- Spring Controller
+- REST API
+- Continue Contacts App Backend
+- Search Functionality
+- Favorite Contact Functionality
+- Duplicate Contact Prevention
+- Postman API Testing
+
+### Spring Boot Fundamentals
+
+Spring Boot is used to create Spring applications quickly with minimum configuration.
+
+### Auto-Configuration
+
+Spring Boot automatically configures required components based on the dependencies available in the project.
+
+### Spring Boot Starters
+
+Spring Boot Starters provide the required dependencies for specific functionality.
+
+Examples:
+
+- `spring-boot-starter-web`
+- `spring-boot-starter-data-jpa`
+- `spring-boot-starter-validation`
+- `spring-boot-starter-test`
+
+### Embedded Server
+
+Spring Boot provides an embedded Tomcat server.
+
+Because of this, the application can run directly without manually installing and configuring a separate server.
+
+### Spring Controller
+
+The Controller handles HTTP requests and sends responses.
+
+### Conclusion
+
+Day 9 focused on Spring Boot fundamentals including auto-configuration, starter dependencies, embedded server, Spring Controllers, and REST APIs.
+
+The Contacts App was enhanced with search functionality, favorite contacts, duplicate email and phone prevention, validation, global exception handling, and automated testing using JUnit, Mockito, REST Assured, and repository testing with H2.
+
+### Code Link : [Day-9](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/Refresher-Training/Day-9)
+
+---
