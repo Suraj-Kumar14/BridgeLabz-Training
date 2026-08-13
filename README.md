@@ -482,3 +482,56 @@ The Contacts App was enhanced with search functionality, favorite contacts, dupl
 ### Code Link : [Day-9](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/Refresher-Training/Day-9)
 
 ---
+
+## Day 10 - Dependency Injection & H2 Database
+
+**Date:** 13-August-2026
+
+Today I worked on the **Employee Payroll App backend** using **Spring Boot, Spring JDBC, and H2 Database**.
+
+The main focus was understanding **Dependency Injection**, integrating **H2 Database**, connecting the database using **JdbcTemplate**, and building a structured Employee Payroll REST API.
+
+### Topics Covered
+
+- Understood Dependency Injection (DI) in Spring Boot.
+- Used **constructor injection** to inject dependencies.
+- Connected different application layers using DI:
+  - Controller → Service
+  - Service → DAO
+  - DAO → JdbcTemplate
+- Used Spring annotations:
+  - `@RestController`
+  - `@Service`
+  - `@Repository`
+- Understood how Spring creates and manages beans.
+
+### 2. H2 Database Integration
+
+- Integrated H2 in-memory database with Spring Boot.
+- Configured H2 database connection.
+- Used `JdbcTemplate` to communicate with the database.
+- Created database tables using `schema.sql`.
+- Inserted initial data using `data.sql`.
+- Created relationships between:
+  - `departments`
+  - `employees`
+
+### 3. Employee Payroll Database Structure
+
+Created two main tables.
+
+#### Department
+
+department_id
+department_name
+
+#### Employee
+
+id
+name
+email
+department_id
+salary
+joining_date
+
+### Code Link : [Day-10](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/Refresher-Training/Day-10)
