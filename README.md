@@ -505,7 +505,7 @@ The main focus was understanding **Dependency Injection**, integrating **H2 Data
   - `@Repository`
 - Understood how Spring creates and manages beans.
 
-### 2. H2 Database Integration
+### 1. H2 Database Integration
 
 - Integrated H2 in-memory database with Spring Boot.
 - Configured H2 database connection.
@@ -516,7 +516,7 @@ The main focus was understanding **Dependency Injection**, integrating **H2 Data
   - `departments`
   - `employees`
 
-### 3. Employee Payroll Database Structure
+### 2. Employee Payroll Database Structure
 
 Created two main tables.
 
