@@ -535,3 +535,50 @@ salary
 joining_date
 
 ### Code Link : [Day-10](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/Refresher-Training/Day-10)
+
+---
+
+## Day 11 - Spring Services, Spring JPA & Spring JDBC
+
+**Date:** 14-August-2026
+
+### Topics Covered
+
+- Spring REST API - Service Layer Design
+- Spring Service Layer and Dependency Injection
+- Spring JDBC
+- JdbcTemplate
+- Spring JPA
+- Spring Data JPA Repositories
+- JPA Entity Mapping
+- Repository Pattern
+- CRUD Operations
+- Employee-Department Entity Relationship
+- Migration from Spring JDBC to Spring JPA
+- Pagination
+- Sorting
+- Custom JPA Queries
+- Postman API Testing
+
+### Spring REST API - Service Layer Design
+
+The Service layer contains the business logic of the application.
+
+It acts as a bridge between the Controller and Repository layers.
+
+The basic flow is:
+
+```text
+Client
+   ↓
+Controller
+   ↓
+Service
+   ↓
+Repository
+   ↓
+Database
+
+```
+
+### Code Link : [Day-11](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/Refresher-Training/Day-11)
