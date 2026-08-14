@@ -12,6 +12,7 @@ target/
 .project
 .settings/
 .factorypath
+.postman/
 .springBeans
 .sts4-cache/
 
