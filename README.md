@@ -582,3 +582,49 @@ Database
 ```
 
 ### Code Link : [Day-11](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/Refresher-Training/Day-11)
+
+## Day 12 — Spring Scopes, Logging, Maven & Postman
+
+**Date:** 17-August-2026
+
+### 📚 Topics Covered
+
+- **Maven**
+  - Build & dependency management
+  - `pom.xml` and Maven lifecycle
+  - Common Maven commands
+
+- **Postman**
+  - API testing workflow
+  - Created Postman collections
+  - Tested GET, POST, PUT & DELETE APIs
+  - Tested success and error scenarios
+
+- **Spring Bean Scopes**
+  - Singleton
+  - Prototype
+  - Request
+  - Session
+
+- **Logging**
+  - Logging in Spring Boot applications
+  - INFO, DEBUG, WARN & ERROR logs
+  - Used logging for debugging and monitoring
+
+- **Employee Payroll Backend**
+  - Completed Employee Payroll backend
+  - Employee & Department REST APIs
+  - DTOs and validation
+  - Exception handling
+  - Database integration
+
+- **API Testing**
+  - Tested all Employee Payroll endpoints
+  - Created and executed Postman collections
+  - Verified HTTP status codes and API responses
+
+### 🛠️ Technologies
+
+`Java` `Spring Boot` `Spring JDBC` `H2` `Maven` `Postman` `REST API` `Logging`
+
+### Code Link : [Day-12](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/Refresher-Training/Day-12)
