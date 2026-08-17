@@ -583,6 +583,8 @@ Database
 
 ### Code Link : [Day-11](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/Refresher-Training/Day-11)
 
+---
+
 ## Day 12 — Spring Scopes, Logging, Maven & Postman
 
 **Date:** 17-August-2026
@@ -628,3 +630,5 @@ Database
 `Java` `Spring Boot` `Spring JDBC` `H2` `Maven` `Postman` `REST API` `Logging`
 
 ### Code Link : [Day-12](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/Refresher-Training/Day-12)
+
+---
