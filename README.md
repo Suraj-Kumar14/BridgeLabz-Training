@@ -632,3 +632,74 @@ Database
 ### Code Link : [Day-12](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/Refresher-Training/Day-12)
 
 ---
+
+# Day 13 – Advanced Backend Development
+
+**Date:** 18-August-2026
+
+## Spring Security & JWT Authentication
+
+**Project:** Fundoo Notes Application  
+**Module:** User Management & Authentication
+
+---
+
+## 📚 Topics Covered
+
+- Spring Boot Recap
+- Spring Security Fundamentals
+- Authentication & Authorization
+- Password Encryption using BCrypt
+- JWT (JSON Web Token)
+- Token-Based Authentication
+- JWT Generation & Validation
+- JWT Authentication Filter
+- `UserDetailsService`
+- `AuthenticationManager`
+- Stateless Session Management
+- DTO-based API Design
+- Bean Validation
+- Global Exception Handling
+- MySQL with Spring Data JPA
+- Postman API Testing
+
+---
+
+## 👤 Fundoo Notes – User Management
+
+Implemented the User Management module with the following operations:
+
+| Operation       | Method | Endpoint                    | Authentication |
+| --------------- | ------ | --------------------------- | -------------- |
+| Register        | POST   | `/api/auth/register`        | Public         |
+| Login           | POST   | `/api/auth/login`           | Public         |
+| Forgot Password | POST   | `/api/auth/forgot-password` | Public         |
+| Reset Password  | POST   | `/api/auth/reset-password`  | Public         |
+
+---
+
+## 🔐 Spring Security
+
+Implemented Spring Security for:
+
+- User authentication
+- Password encryption using BCrypt
+- JWT validation
+- Securing APIs
+- Stateless authentication
+- Custom JWT authentication filter
+
+### Password Encryption
+
+Passwords are encrypted before storing them in the database.
+
+```java
+@Bean
+public PasswordEncoder passwordEncoder() {
+    return new BCryptPasswordEncoder();
+}
+```
+
+### Code Link : [Day-13](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/Refresher-Training/Day-13)
+
+---
