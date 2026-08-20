@@ -703,3 +703,57 @@ public PasswordEncoder passwordEncoder() {
 ### Code Link : [Day-13](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/Refresher-Training/Day-13)
 
 ---
+
+## Day 14 – Advanced Backend Development
+
+**Date:** 19-August-2026
+
+### Authorization & JPA for Notes Management
+
+**Project:** Fundoo Notes Application  
+**Module:** Authentication, Authorization & Notes Management
+
+---
+
+### 📚 Topics Covered
+
+- Authentication vs Authorization
+- Secure Token-Based Verification
+- Spring Security Authorization
+- JWT-Based Authentication
+- Role-Based Access Control
+- Spring Data JPA
+- JPA Entity Relationships
+- Entity Mapping
+- `@OneToMany`
+- `@ManyToOne`
+- `@OneToOne`
+- `@ManyToMany`
+- JPA Repository
+- Derived Query Methods
+- User-Note Relationship
+- Fundoo Notes Authentication & Authorization Module
+- Fundoo Notes Notes Management Module
+- Create Notes
+- Delete Notes
+- DTO-based API Design
+- Bean Validation
+- Exception Handling
+- MySQL Database
+- Postman API Testing
+
+---
+
+### 🔐 Authentication vs Authorization
+
+#### Authentication
+
+Authentication verifies **who the user is**.
+
+Example:
+
+```text
+User → Login → Username & Password Verification → JWT Token
+```
+
+### Code Link : [Day-14](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/Refresher-Training/Day-14)
