@@ -713,8 +713,6 @@ public PasswordEncoder passwordEncoder() {
 **Project:** Fundoo Notes Application  
 **Module:** Authentication, Authorization & Notes Management
 
----
-
 ### 📚 Topics Covered
 
 - Authentication vs Authorization
@@ -742,8 +740,6 @@ public PasswordEncoder passwordEncoder() {
 - MySQL Database
 - Postman API Testing
 
----
-
 ### 🔐 Authentication vs Authorization
 
 #### Authentication
@@ -757,3 +753,5 @@ User → Login → Username & Password Verification → JWT Token
 ```
 
 ### Code Link : [Day-14](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/Refresher-Training/Day-14)
+
+---
