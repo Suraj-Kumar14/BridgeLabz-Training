@@ -755,3 +755,82 @@ User → Login → Username & Password Verification → JWT Token
 ### Code Link : [Day-14](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/Refresher-Training/Day-14)
 
 ---
+
+## Day 15 – Advanced Backend Development
+
+**Date:** 21-August-2026
+**Project:** Fundoo Notes Application
+
+### 📚 Topics Covered
+
+- Organisation-oriented REST APIs
+- State-based filtering
+- Pin / Unpin Notes
+- Archive / Unarchive Notes
+- Trash / Restore Notes
+- Search & Filter APIs
+- Tags / Labels Management
+- JWT-based user-specific operations
+- Postman API testing
+
+### 📌 Organisation Modules
+
+#### Pin / Archive / Trash
+
+Implemented note organisation using different states:
+
+- 📌 **Pin** – Mark important notes.
+- 📦 **Archive** – Move notes out of the active list.
+- 🗑️ **Trash** – Move notes to trash.
+- ♻️ **Restore** – Restore trashed notes.
+
+#### 🔍 Search & Filter
+
+Implemented search and filtering using query parameters.
+
+Example:
+
+```http
+GET /api/notes/search?keyword=java&pinned=true&archived=false
+```
+
+Supported filters:
+
+- Keyword
+- Pinned
+- Archived
+- Trashed
+- Tags
+
+#### 🏷️ Tags / Labels
+
+Implemented label management:
+
+- Create Label
+- Get Labels
+- Update Label
+- Delete Label
+- Add Label to Note
+- Remove Label from Note
+
+### 🔐 Security
+
+All note organisation operations are protected using **JWT authentication** and are restricted to the authenticated user's own notes.
+
+### 🧪 Testing
+
+Tested APIs using **Postman**, including:
+
+- Pin / Unpin
+- Archive / Unarchive
+- Trash / Restore
+- Search & Filter
+- Label CRUD
+- Note-Label mapping
+- Authorization and error scenarios
+
+### 🎯 Key Learning
+
+Learned how to design **state-based REST APIs**, implement flexible search/filter queries, and manage note organisation using **Pin, Archive, Trash and Tags**.
+
+### Code Link : [Day-15](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/Refresher-Training/Day-15)
