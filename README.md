@@ -759,6 +759,7 @@ User → Login → Username & Password Verification → JWT Token
 ## Day 15 – Advanced Backend Development
 
 **Date:** 21-August-2026
+
 **Project:** Fundoo Notes Application
 
 ### 📚 Topics Covered
