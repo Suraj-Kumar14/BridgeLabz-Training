@@ -835,3 +835,135 @@ Tested APIs using **Postman**, including:
 Learned how to design **state-based REST APIs**, implement flexible search/filter queries, and manage note organisation using **Pin, Archive, Trash and Tags**.
 
 ### Code Link : [Day-15](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/Refresher-Training/Day-15)
+
+---
+
+## Day 16 – Advanced Backend Development
+
+**Date:** 21-August-2026
+
+### JMS (Asynchronous Messaging) & Redis Caching
+
+**Project:** Fundoo Notes Application
+**Module:** Reminder, Notification & Token Caching
+
+### 📚 Topics Covered
+
+- JMS (Java Message Service)
+- Asynchronous & non-blocking messaging
+- Background processing using JMS
+- Message Producer & Consumer
+- Queue-based communication
+- Reminder & Notification Module using JMS
+- Redis Caching
+- Token caching using Redis
+- Improving authorization performance with Redis
+
+### 🔹 JMS (Java Message Service)
+
+JMS is used for **asynchronous communication** between different parts of an application.
+
+Instead of processing every task immediately, the application can send a message to a queue and continue its main operation. A consumer processes the message in the background.
+
+#### Benefits
+
+- Asynchronous processing
+- Non-blocking operations
+- Background task execution
+- Loose coupling between components
+- Better application performance
+- Reliable message-based communication
+
+#### Basic Flow
+
+```text
+User Request
+     ↓
+Controller
+     ↓
+JMS Producer
+     ↓
+Message Queue
+     ↓
+JMS Consumer
+     ↓
+Background Processing
+     ↓
+Reminder / Notification
+```
+
+### 🔹 Fundoo Notes – Reminder & Notification Module
+
+JMS was integrated into the Fundoo Notes application to handle reminder and notification processing asynchronously.
+
+### Flow
+
+```text
+Create / Update Reminder
+        ↓
+JMS Producer
+        ↓
+Message Queue
+        ↓
+JMS Consumer
+        ↓
+Process Reminder
+        ↓
+Send Notification
+```
+
+This prevents notification processing from blocking the main API request.
+
+### 🔹 Redis Caching
+
+Redis is an **in-memory key-value data store** commonly used for caching.
+
+In Fundoo Notes, Redis is used to cache authentication-related data such as JWT tokens.
+
+### Token Caching Flow
+
+```text
+User Login
+    ↓
+JWT Token Generated
+    ↓
+Token Stored in Redis
+    ↓
+User Sends Request
+    ↓
+JWT Authentication Filter
+    ↓
+Check Token in Redis
+    ↓
+Valid → Continue Request
+Invalid → Reject Request
+```
+
+### 🔹 Benefits of Redis Token Caching
+
+- Faster token validation
+- Reduces repeated database operations
+- Improves authorization performance
+- Supports token invalidation
+- Helps manage token expiration
+- Useful for logout and password-reset scenarios
+
+### 🔹 Technologies Used
+
+- Java
+- Spring Boot
+- Spring JMS
+- JMS Message Queue
+- Redis
+- Spring Data Redis
+- Spring Security
+- JWT
+- MySQL
+
+### 🎯 Day 16 Outcome
+
+Implemented asynchronous processing using **JMS** for the Fundoo Notes Reminder & Notification module and introduced **Redis caching** for JWT token management, improving application responsiveness and authorization performance.
+
+### Code Link : [Day-16](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/Refresher-Training/Day-16)
+
+---
