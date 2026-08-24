@@ -967,3 +967,80 @@ Implemented asynchronous processing using **JMS** for the Fundoo Notes Reminder 
 ### Code Link : [Day-16](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/Refresher-Training/Day-16)
 
 ---
+
+# Day 17 – RabbitMQ & Spring Batch (Excel)
+
+**Date:** 24 August 2026
+
+## 📚 Topics Covered
+
+### 1. RabbitMQ – Message Queuing
+
+- RabbitMQ message queuing fundamentals
+- Producer, Consumer, Queue, Exchange and Routing Key
+- Asynchronous communication using RabbitMQ
+- Decoupling application components using message queues
+- Exploring RabbitMQ for smooth background and asynchronous operations
+
+### 2. Spring Batch – Excel Processing
+
+- Understanding batch processing
+- Reading data from Excel files
+- Processing records in batches
+- Writing/exporting data to Excel
+- Understanding Spring Batch components:
+  - Job
+  - Step
+  - ItemReader
+  - ItemProcessor
+  - ItemWriter
+
+### 3. Fundoo Notes App
+
+- Explored **File Attachment Module** _(Optional)_
+- RabbitMQ can be used for background/asynchronous operations such as:
+  - File processing
+  - Notifications
+  - Background tasks
+- Spring Batch can be used for bulk Excel import/export of notes.
+
+## 🎯 Learning Objective
+
+To understand how **RabbitMQ** handles asynchronous communication and how **Spring Batch** processes large amounts of data efficiently, including Excel import/export operations.
+
+## 🛠️ Technologies
+
+- Java
+- Spring Boot
+- RabbitMQ
+- Spring Batch
+- Apache POI
+- Excel
+- Maven
+
+## 📂 Fundoo Notes App Integration
+
+```text
+Fundoo Notes App
+       |
+       ├── RabbitMQ
+       │     └── Background / Async Operations
+       │
+       ├── Spring Batch
+       │     ├── Excel Import
+       │     └── Excel Export
+       │
+       └── File Attachment Module
+             └── Optional
+
+```
+
+### 🎯 Day 17 Outcome
+
+- Learned the fundamentals of RabbitMQ message queuing.
+- Understood asynchronous/background processing.
+- Learned the basics of Spring Batch.
+- Implemented/Explored Excel import and export using batch processing.
+- Explored how RabbitMQ and Spring Batch can be integrated into the Fundoo Notes App.
+
+### Code Link : [Day-17](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/Refresher-Training/Day-17)
