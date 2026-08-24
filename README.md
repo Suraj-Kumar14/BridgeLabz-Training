@@ -1044,3 +1044,77 @@ Fundoo Notes App
 - Explored how RabbitMQ and Spring Batch can be integrated into the Fundoo Notes App.
 
 ### Code Link : [Day-17](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/Refresher-Training/Day-17)
+
+---
+
+## Day 18 – REST API Patterns, Global Exception Handling, AOP & Spring Cloud
+
+**Date:** 24-August-2026
+
+**Project:** Fundoo Notes Application  
+**Module:** Advanced Backend Development
+
+### 📚 Topics Covered
+
+- REST API Design Patterns
+- Spring Scopes
+- DTO ↔ Entity Mapping
+- Global Exception Handling
+- Logging Best Practices
+- AOP (Aspect-Oriented Programming)
+- Introduction to Spring Cloud
+- Backend Error Handling & Hardening
+
+### 🎯 Objectives
+
+- Design clean and consistent REST APIs.
+- Separate DTOs from JPA entities.
+- Implement centralized exception handling using `@ControllerAdvice`.
+- Add meaningful application logging.
+- Understand and implement AOP for cross-cutting concerns.
+- Revisit Spring Bean scopes.
+- Understand the fundamentals of Spring Cloud.
+- Improve the overall reliability and maintainability of the Fundoo Notes backend.
+
+### 🛠️ Fundoo Notes Backend Improvements
+
+The application backend is consolidated and hardened by implementing:
+
+- Standard HTTP status codes and REST API responses.
+- Request/Response DTO mapping.
+- Centralized exception handling.
+- Custom application exceptions.
+- Validation error handling.
+- Structured logging for important application events.
+- AOP-based logging and cross-cutting functionality.
+- Clean Controller → Service → Repository architecture.
+- Better error handling across authentication and notes modules.
+
+### 🧩 Global Exception Handling
+
+Implemented centralized exception handling using:
+
+- `@ControllerAdvice`
+- `@ExceptionHandler`
+- Custom exceptions
+- Validation exception handling
+- Consistent error response structure
+
+Example flow:
+
+```text
+Controller
+    ↓
+Service
+    ↓
+Exception
+    ↓
+GlobalExceptionHandler
+    ↓
+Standard Error Response
+
+```
+
+### Code Link : [Day-18](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/Refresher-Training/Day-18)
+
+---
