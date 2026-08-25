@@ -23,20 +23,20 @@ public class EmailOtpService {
 	@Transactional
 	public String generateAndSaveOtp(String email, OtpPurpose purpose) {
 
+		// Invalidate previous unused OTPs
+		emailOtpRepository.findByEmailAndPurposeAndUsedFalse(email, purpose).forEach(existingOtp -> {
+			existingOtp.setUsed(true);
+		});
+
 		String otp = otpService.generateOtp();
 
 		EmailOtp emailOtp = new EmailOtp();
 
 		emailOtp.setEmail(email);
-
 		emailOtp.setOtp(otp);
-
 		emailOtp.setPurpose(purpose);
-
 		emailOtp.setCreatedAt(LocalDateTime.now());
-
 		emailOtp.setExpiresAt(LocalDateTime.now().plusMinutes(5));
-
 		emailOtp.setUsed(false);
 
 		emailOtpRepository.save(emailOtp);

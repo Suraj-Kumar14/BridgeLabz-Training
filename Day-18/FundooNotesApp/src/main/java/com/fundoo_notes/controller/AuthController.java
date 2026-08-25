@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.fundoo_notes.dto.request.user.ForgetPasswordRequestDTO;
 import com.fundoo_notes.dto.request.user.LoginRequestDTO;
 import com.fundoo_notes.dto.request.user.RegisterRequestDTO;
+import com.fundoo_notes.dto.request.user.ResendOtpRequestDTO;
 import com.fundoo_notes.dto.request.user.ResetPasswordRequestDTO;
 import com.fundoo_notes.dto.request.user.UserPatchRequestDTO;
 import com.fundoo_notes.dto.request.user.VerifyOtpRequestDTO;
@@ -50,6 +51,12 @@ public class AuthController {
 		LoginResponseDTO response = authService.loginUser(request);
 
 		return ResponseEntity.ok(response);
+	}
+
+	@PostMapping("/resend-otp")
+	public ResponseEntity<String> resendOtp(@Valid @RequestBody ResendOtpRequestDTO request) {
+
+		return ResponseEntity.ok(authService.resendVerificationOtp(request.getEmail()));
 	}
 
 	@PostMapping("/forgot-password")

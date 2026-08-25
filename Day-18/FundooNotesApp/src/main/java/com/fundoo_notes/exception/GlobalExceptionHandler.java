@@ -102,6 +102,22 @@ public class GlobalExceptionHandler {
 		return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(response);
 	}
 
+	@ExceptionHandler(InvalidOtpException.class)
+	public ResponseEntity<ErrorResponse> handleInvalidOtpException(InvalidOtpException ex) {
+
+		ErrorResponse response = new ErrorResponse(HttpStatus.BAD_REQUEST.value(), "Something went wrong");
+
+		return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(response);
+	}
+
+	@ExceptionHandler(EmailNotVerifiedException.class)
+	public ResponseEntity<ErrorResponse> handleEmailNotVerified(EmailNotVerifiedException ex) {
+
+		ErrorResponse response = new ErrorResponse(HttpStatus.FORBIDDEN.value(), ex.getMessage());
+
+		return ResponseEntity.status(HttpStatus.FORBIDDEN).body(response);
+	}
+
 	// Unexpected exception
 	@ExceptionHandler(Exception.class)
 	public ResponseEntity<ErrorResponse> handleException(Exception ex) {
@@ -110,12 +126,5 @@ public class GlobalExceptionHandler {
 
 		return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(response);
 	}
-	
-	@ExceptionHandler(InvalidOtpException.class)
-	public ResponseEntity<ErrorResponse> handleInvalidOtpException(InvalidOtpException ex) {
 
-		ErrorResponse response = new ErrorResponse(HttpStatus.BAD_REQUEST.value(), "Something went wrong");
-
-		return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(response);
-	}
 }

@@ -21,4 +21,8 @@ public interface AuthService {
 
 	UserResponseDTO updateUser(UserPatchRequestDTO request);
 
-	void verifyOtp(VerifyOtpRequestDTO request);}
+	void verifyOtp(VerifyOtpRequestDTO request);
+	
+	String resendVerificationOtp(String email);
+	
+}

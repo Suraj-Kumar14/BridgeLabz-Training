@@ -1,8 +1,10 @@
 package com.fundoo_notes.service;
 
 import java.time.LocalDateTime;
+import java.util.Optional;
 
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -18,6 +20,7 @@ import com.fundoo_notes.dto.response.UserResponseDTO;
 import com.fundoo_notes.entity.EmailOtp;
 import com.fundoo_notes.entity.OtpPurpose;
 import com.fundoo_notes.entity.User;
+import com.fundoo_notes.exception.EmailNotVerifiedException;
 import com.fundoo_notes.exception.UserAlreadyExistsException;
 import com.fundoo_notes.exception.UserNotFoundException;
 import com.fundoo_notes.repository.EmailOtpRepository;
@@ -40,21 +43,39 @@ public class AuthServiceImpl implements AuthService {
 	private final EmailService emailService;
 	private final EmailOtpService emailOtpService;
 	private final EmailOtpRepository emailOtpRepository;
-	
+
 	@Override
+	@Transactional
 	public UserResponseDTO registerUser(RegisterRequestDTO registerRequest) {
 
-		if (userRepository.existsByEmail(registerRequest.getEmail())) {
+		String email = registerRequest.getEmail();
 
-			throw new UserAlreadyExistsException("Email already exists");
+		Optional<User> existingUser = userRepository.findByEmail(email);
+
+		// CASE 1: Email already exists
+		if (existingUser.isPresent()) {
+
+			User user = existingUser.get();
+
+			// User exists but email is NOT verified
+			if (!user.isEmailVerified()) {
+
+				String otp = emailOtpService.generateAndSaveOtp(user.getEmail(), OtpPurpose.REGISTRATION);
+
+				emailService.sendRegistrationOtp(user.getEmail(), otp);
+
+				return toResponse(user);
+			}
+
+			// User exists and email is already verified
+			throw new UserAlreadyExistsException("Email already exists and is already verified");
 		}
 
+		// CASE 2: New user
 		User user = new User();
 
 		user.setName(registerRequest.getName());
-
-		user.setEmail(registerRequest.getEmail());
-
+		user.setEmail(email);
 		user.setPhone(registerRequest.getPhone());
 
 		String encodedPassword = passwordEncoder.encode(registerRequest.getPassword());
@@ -67,8 +88,10 @@ public class AuthServiceImpl implements AuthService {
 
 		User savedUser = userRepository.save(user);
 
+		// Generate OTP
 		String otp = emailOtpService.generateAndSaveOtp(savedUser.getEmail(), OtpPurpose.REGISTRATION);
 
+		// Send OTP
 		emailService.sendRegistrationOtp(savedUser.getEmail(), otp);
 
 		return toResponse(savedUser);
@@ -77,16 +100,16 @@ public class AuthServiceImpl implements AuthService {
 	@Override
 	public LoginResponseDTO loginUser(LoginRequestDTO loginRequest) {
 
-		authenticationManager.authenticate(
-				new UsernamePasswordAuthenticationToken(loginRequest.getEmail(), loginRequest.getPassword()));
-
 		User user = userRepository.findByEmail(loginRequest.getEmail())
-				.orElseThrow(() -> new UserNotFoundException("User not found"));
+				.orElseThrow(() -> new BadCredentialsException("Invalid email or password"));
 
 		if (!user.isEmailVerified()) {
 
-			throw new RuntimeException("Please verify your email before login");
+			throw new EmailNotVerifiedException("Email is not verified. Please verify your email before login.");
 		}
+
+		authenticationManager.authenticate(
+				new UsernamePasswordAuthenticationToken(loginRequest.getEmail(), loginRequest.getPassword()));
 
 		String token = jwtService.generateToken(loginRequest.getEmail(), user.getTokenVersion());
 
@@ -160,54 +183,52 @@ public class AuthServiceImpl implements AuthService {
 	@Transactional
 	public void verifyOtp(VerifyOtpRequestDTO request) {
 
-	    User user = userRepository
-	            .findByEmail(request.getEmail())
-	            .orElseThrow(() ->
-	                    new UserNotFoundException(
-	                            "User not found with email: "
-	                                    + request.getEmail()
-	                    )
-	            );
+		User user = userRepository.findByEmail(request.getEmail())
+				.orElseThrow(() -> new UserNotFoundException("User not found with email: " + request.getEmail()));
 
-	    EmailOtp emailOtp = emailOtpRepository
-	            .findTopByEmailAndPurposeAndUsedFalseOrderByCreatedAtDesc(
-	                    request.getEmail(),
-	                    OtpPurpose.REGISTRATION
-	            )
-	            .orElseThrow(() ->
-	                    new RuntimeException(
-	                            "OTP not found or already used"
-	                    )
-	            );
+		EmailOtp emailOtp = emailOtpRepository
+				.findTopByEmailAndPurposeAndUsedFalseOrderByCreatedAtDesc(request.getEmail(), OtpPurpose.REGISTRATION)
+				.orElseThrow(() -> new RuntimeException("OTP not found or already used"));
 
-	    if (emailOtp.getExpiresAt() == null) {
-	        throw new RuntimeException(
-	                "OTP expiry time is missing"
-	        );
-	    }
+		if (emailOtp.getExpiresAt() == null) {
+			throw new RuntimeException("OTP expiry time is missing");
+		}
 
-	    if (emailOtp.getExpiresAt()
-	            .isBefore(LocalDateTime.now())) {
+		if (emailOtp.getExpiresAt().isBefore(LocalDateTime.now())) {
 
-	        throw new RuntimeException(
-	                "OTP has expired"
-	        );
-	    }
+			throw new RuntimeException("OTP has expired");
+		}
 
-	    if (!emailOtp.getOtp()
-	            .equals(request.getOtp())) {
+		if (!emailOtp.getOtp().equals(request.getOtp())) {
 
-	        throw new RuntimeException(
-	                "Invalid OTP"
-	        );
-	    }
+			throw new RuntimeException("Invalid OTP");
+		}
 
-	    user.setEmailVerified(true);
+		user.setEmailVerified(true);
 
-	    userRepository.save(user);
+		userRepository.save(user);
 
-	    emailOtp.setUsed(true);
+		emailOtp.setUsed(true);
 
-	    emailOtpRepository.save(emailOtp);
+		emailOtpRepository.save(emailOtp);
+	}
+
+	@Override
+	@Transactional
+	public String resendVerificationOtp(String email) {
+
+		User user = userRepository.findByEmail(email)
+				.orElseThrow(() -> new UserNotFoundException("User not found with this email"));
+
+		if (user.isEmailVerified()) {
+
+			throw new UserAlreadyExistsException("Email is already verified");
+		}
+
+		String otp = emailOtpService.generateAndSaveOtp(user.getEmail(), OtpPurpose.REGISTRATION);
+
+		emailService.sendRegistrationOtp(user.getEmail(), otp);
+
+		return "New verification OTP has been sent to your email";
 	}
 }
