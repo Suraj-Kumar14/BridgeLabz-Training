@@ -18,31 +18,15 @@ import com.fundoo_notes.dto.response.NoteResponseDTO;
 @EnableCaching
 public class RedisConfig {
 
-    @Bean
-    RedisCacheManager cacheManager(
-            RedisConnectionFactory connectionFactory) {
+	@Bean
+	RedisCacheManager cacheManager(RedisConnectionFactory connectionFactory) {
 
-        RedisCacheConfiguration config =
-                RedisCacheConfiguration.defaultCacheConfig()
-                        .entryTtl(Duration.ofMinutes(10))
-                        .serializeKeysWith(
-                                RedisSerializationContext.SerializationPair
-                                        .fromSerializer(
-                                                new StringRedisSerializer()
-                                        )
-                        )
-                        .serializeValuesWith(
-                                RedisSerializationContext.SerializationPair
-                                        .fromSerializer(
-                                                new JacksonJsonRedisSerializer<>(
-                                                        NoteResponseDTO.class
-                                                )
-                                        )
-                        );
+		RedisCacheConfiguration config = RedisCacheConfiguration.defaultCacheConfig().entryTtl(Duration.ofMinutes(10))
+				.serializeKeysWith(
+						RedisSerializationContext.SerializationPair.fromSerializer(new StringRedisSerializer()))
+				.serializeValuesWith(RedisSerializationContext.SerializationPair
+						.fromSerializer(new JacksonJsonRedisSerializer<>(NoteResponseDTO.class)));
 
-        return RedisCacheManager
-                .builder(connectionFactory)
-                .cacheDefaults(config)
-                .build();
-    }
+		return RedisCacheManager.builder(connectionFactory).cacheDefaults(config).build();
+	}
 }

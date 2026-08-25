@@ -18,93 +18,77 @@ import com.fundoo_notes.dto.batch.ExcelNoteDTO;
 import com.fundoo_notes.repository.NoteRepository;
 import com.fundoo_notes.repository.UserRepository;
 
-
 @Configuration
 public class BatchConfig {
 
-    @Bean
-    @StepScope
-    public ExcelNoteReader excelNoteReader(
-            @Value("#{jobParameters['filePath']}")
-            String filePath) {
+	@Bean
+	@StepScope
+	public ExcelNoteReader excelNoteReader(@Value("#{jobParameters['filePath']}") String filePath) {
 
-        try {
+		try {
 
-            return new ExcelNoteReader(
-                    new FileInputStream(filePath));
+			return new ExcelNoteReader(new FileInputStream(filePath));
 
-        } catch (Exception e) {
+		} catch (Exception e) {
 
-            throw new RuntimeException(
-                    "Unable to read Excel file", e);
-        }
-    }
+			throw new RuntimeException("Unable to read Excel file", e);
+		}
+	}
 
-    @Bean
-    public ExcelNoteProcessor excelNoteProcessor() {
+	@Bean
+	public ExcelNoteProcessor excelNoteProcessor() {
 
-        return new ExcelNoteProcessor();
-    }
+		return new ExcelNoteProcessor();
+	}
 
-    @Bean
-    @StepScope
-    public ItemWriter<ExcelNoteDTO> excelNoteWriter(
+	@Bean
+	@StepScope
+	public ItemWriter<ExcelNoteDTO> excelNoteWriter(
 
-            NoteRepository noteRepository,
-            UserRepository userRepository,
+			NoteRepository noteRepository, UserRepository userRepository,
 
-            @Value("#{jobParameters['userEmail']}")
-            String userEmail) {
+			@Value("#{jobParameters['userEmail']}") String userEmail) {
 
-        return new ExcelNoteWriter(
-                noteRepository,
-                userRepository,
-                userEmail);
-    }
+		return new ExcelNoteWriter(noteRepository, userRepository, userEmail);
+	}
 
-    @Bean
-    public Step importNotesStep(
+	@Bean
+	public Step importNotesStep(
 
-            JobRepository jobRepository,
+			JobRepository jobRepository,
 
-            PlatformTransactionManager transactionManager,
+			PlatformTransactionManager transactionManager,
 
-            ExcelNoteReader excelNoteReader,
+			ExcelNoteReader excelNoteReader,
 
-            ExcelNoteProcessor excelNoteProcessor,
+			ExcelNoteProcessor excelNoteProcessor,
 
-            ItemWriter<ExcelNoteDTO> excelNoteWriter) {
+			ItemWriter<ExcelNoteDTO> excelNoteWriter) {
 
-        return new StepBuilder(
-                "importNotesStep",
-                jobRepository)
+		return new StepBuilder("importNotesStep", jobRepository)
 
-                .<ExcelNoteDTO, ExcelNoteDTO>chunk(
-                        10,
-                        transactionManager)
+				.<ExcelNoteDTO, ExcelNoteDTO>chunk(10, transactionManager)
 
-                .reader(excelNoteReader)
+				.reader(excelNoteReader)
 
-                .processor(excelNoteProcessor)
+				.processor(excelNoteProcessor)
 
-                .writer(excelNoteWriter)
+				.writer(excelNoteWriter)
 
-                .build();
-    }
+				.build();
+	}
 
-    @Bean
-    public Job importNotesJob(
+	@Bean
+	public Job importNotesJob(
 
-            JobRepository jobRepository,
+			JobRepository jobRepository,
 
-            Step importNotesStep) {
+			Step importNotesStep) {
 
-        return new JobBuilder(
-                "importNotesJob",
-                jobRepository)
+		return new JobBuilder("importNotesJob", jobRepository)
 
-                .start(importNotesStep)
+				.start(importNotesStep)
 
-                .build();
-    }
+				.build();
+	}
 }

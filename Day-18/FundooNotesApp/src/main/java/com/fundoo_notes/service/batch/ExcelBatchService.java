@@ -14,60 +14,42 @@ import java.nio.file.Path;
 @Service
 public class ExcelBatchService {
 
-    private final JobLauncher jobLauncher;
-    private final Job importNotesJob;
+	private final JobLauncher jobLauncher;
+	private final Job importNotesJob;
 
-    public ExcelBatchService(
-            JobLauncher jobLauncher,
-            Job importNotesJob) {
+	public ExcelBatchService(JobLauncher jobLauncher, Job importNotesJob) {
 
-        this.jobLauncher = jobLauncher;
-        this.importNotesJob = importNotesJob;
-    }
+		this.jobLauncher = jobLauncher;
+		this.importNotesJob = importNotesJob;
+	}
 
-    public JobExecution importNotes(
-            MultipartFile file,
-            String userEmail) {
+	public JobExecution importNotes(MultipartFile file, String userEmail) {
 
-        try {
+		try {
 
-            Path uploadDirectory =
-                    Path.of("uploads");
+			Path uploadDirectory = Path.of("uploads");
 
-            Files.createDirectories(uploadDirectory);
+			Files.createDirectories(uploadDirectory);
 
-            Path filePath =
-                    uploadDirectory.resolve(
-                            file.getOriginalFilename());
+			Path filePath = uploadDirectory.resolve(file.getOriginalFilename());
 
-            file.transferTo(filePath);
+			file.transferTo(filePath);
 
-            JobParameters jobParameters =
-                    new JobParametersBuilder()
+			JobParameters jobParameters = new JobParametersBuilder()
 
-                            .addString(
-                                    "filePath",
-                                    filePath.toAbsolutePath()
-                                            .toString())
+					.addString("filePath", filePath.toAbsolutePath().toString())
 
-                            .addString(
-                                    "userEmail",
-                                    userEmail)
+					.addString("userEmail", userEmail)
 
-                            .addLong(
-                                    "timestamp",
-                                    System.currentTimeMillis())
+					.addLong("timestamp", System.currentTimeMillis())
 
-                            .toJobParameters();
+					.toJobParameters();
 
-            return jobLauncher.run(
-                    importNotesJob,
-                    jobParameters);
+			return jobLauncher.run(importNotesJob, jobParameters);
 
-        } catch (Exception e) {
+		} catch (Exception e) {
 
-            throw new RuntimeException(
-                    "Excel import failed", e);
-        }
-    }
+			throw new RuntimeException("Excel import failed", e);
+		}
+	}
 }

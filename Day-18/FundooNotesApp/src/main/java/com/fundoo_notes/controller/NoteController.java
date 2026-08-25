@@ -122,7 +122,6 @@ public class NoteController {
 		return ResponseEntity.ok(noteService.searchNotes(keyword));
 	}
 
-
 	@PutMapping("/{noteId}/tags/{tagId}")
 	public ResponseEntity<NoteResponseDTO> addTagToNote(@PathVariable Long noteId, @PathVariable Long tagId) {
 
@@ -134,5 +133,5 @@ public class NoteController {
 
 		return ResponseEntity.ok(noteService.removeTagFromNote(noteId, tagId));
 	}
-	
+
 }

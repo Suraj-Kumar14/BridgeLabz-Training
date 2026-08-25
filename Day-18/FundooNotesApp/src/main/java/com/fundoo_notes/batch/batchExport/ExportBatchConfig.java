@@ -20,68 +20,51 @@ import org.springframework.transaction.PlatformTransactionManager;
 @Configuration
 public class ExportBatchConfig {
 
-    @Bean
-    public ItemReader<Note> databaseNoteReader(
-            NoteRepository noteRepository) {
+	@Bean
+	public ItemReader<Note> databaseNoteReader(NoteRepository noteRepository) {
 
-        return new DatabaseNoteReader(
-                noteRepository,
-                "rahul@gmail.com");
-    }
+		return new DatabaseNoteReader(noteRepository, "rahul@gmail.com");
+	}
 
-    @Bean
-    public ItemProcessor<Note, ExportNoteDTO>
-    databaseNoteProcessor() {
+	@Bean
+	public ItemProcessor<Note, ExportNoteDTO> databaseNoteProcessor() {
 
-        return new DatabaseNoteProcessor();
-    }
+		return new DatabaseNoteProcessor();
+	}
 
-    @Bean
-    public ItemWriter<ExportNoteDTO>
-    excelExportWriter() {
+	@Bean
+	public ItemWriter<ExportNoteDTO> excelExportWriter() {
 
-        return new ExcelExportWriter(
-                "notes-export.xlsx");
-    }
+		return new ExcelExportWriter("notes-export.xlsx");
+	}
 
-    @Bean
-    public Step exportNotesStep(
-            JobRepository jobRepository,
-            PlatformTransactionManager transactionManager,
-            ItemReader<Note> databaseNoteReader,
-            ItemProcessor<Note, ExportNoteDTO>
-                    databaseNoteProcessor,
-            ItemWriter<ExportNoteDTO>
-                    excelExportWriter) {
+	@Bean
+	public Step exportNotesStep(JobRepository jobRepository, PlatformTransactionManager transactionManager,
+			ItemReader<Note> databaseNoteReader, ItemProcessor<Note, ExportNoteDTO> databaseNoteProcessor,
+			ItemWriter<ExportNoteDTO> excelExportWriter) {
 
-        return new StepBuilder(
-                "exportNotesStep",
-                jobRepository)
+		return new StepBuilder("exportNotesStep", jobRepository)
 
-                .<Note, ExportNoteDTO>chunk(5)
+				.<Note, ExportNoteDTO>chunk(5)
 
-                .reader(databaseNoteReader)
+				.reader(databaseNoteReader)
 
-                .processor(databaseNoteProcessor)
+				.processor(databaseNoteProcessor)
 
-                .writer(excelExportWriter)
+				.writer(excelExportWriter)
 
-                .transactionManager(transactionManager)
+				.transactionManager(transactionManager)
 
-                .build();
-    }
+				.build();
+	}
 
-    @Bean
-    public Job exportNotesJob(
-            JobRepository jobRepository,
-            Step exportNotesStep) {
+	@Bean
+	public Job exportNotesJob(JobRepository jobRepository, Step exportNotesStep) {
 
-        return new JobBuilder(
-                "exportNotesJob",
-                jobRepository)
+		return new JobBuilder("exportNotesJob", jobRepository)
 
-                .start(exportNotesStep)
+				.start(exportNotesStep)
 
-                .build();
-    }
+				.build();
+	}
 }

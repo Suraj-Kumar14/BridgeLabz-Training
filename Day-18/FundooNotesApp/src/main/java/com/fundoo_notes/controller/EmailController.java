@@ -12,24 +12,17 @@ import com.fundoo_notes.service.email.EmailService;
 @RequestMapping("/api/email")
 public class EmailController {
 
-    private final EmailService emailService;
+	private final EmailService emailService;
 
-    public EmailController(EmailService emailService) {
-        this.emailService = emailService;
-    }
+	public EmailController(EmailService emailService) {
+		this.emailService = emailService;
+	}
 
-    @PostMapping("/test")
-    public ResponseEntity<String> sendTestEmail(
-            @RequestParam String to) {
+	@PostMapping("/test")
+	public ResponseEntity<String> sendTestEmail(@RequestParam String to) {
 
-        emailService.sendEmail(
-                to,
-                "Fundoo Notes SMTP Test",
-                "SMTP email is working successfully!"
-        );
+		emailService.sendEmail(to, "Fundoo Notes SMTP Test", "SMTP email is working successfully!");
 
-        return ResponseEntity.ok(
-                "Test email sent successfully"
-        );
-    }
+		return ResponseEntity.ok("Test email sent successfully");
+	}
 }

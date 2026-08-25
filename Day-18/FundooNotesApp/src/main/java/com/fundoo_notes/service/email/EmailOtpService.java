@@ -16,78 +16,52 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class EmailOtpService {
 
-    private final EmailOtpRepository emailOtpRepository;
+	private final EmailOtpRepository emailOtpRepository;
 
-    private final OtpService otpService;
+	private final OtpService otpService;
 
-    @Transactional
-    public String generateAndSaveOtp(
-            String email,
-            OtpPurpose purpose) {
+	@Transactional
+	public String generateAndSaveOtp(String email, OtpPurpose purpose) {
 
-        String otp =
-                otpService.generateOtp();
+		String otp = otpService.generateOtp();
 
-        EmailOtp emailOtp =
-                new EmailOtp();
+		EmailOtp emailOtp = new EmailOtp();
 
-        emailOtp.setEmail(email);
+		emailOtp.setEmail(email);
 
-        emailOtp.setOtp(otp);
+		emailOtp.setOtp(otp);
 
-        emailOtp.setPurpose(purpose);
+		emailOtp.setPurpose(purpose);
 
-        emailOtp.setCreatedAt(
-                LocalDateTime.now()
-        );
+		emailOtp.setCreatedAt(LocalDateTime.now());
 
-        emailOtp.setExpiresAt(
-                LocalDateTime.now()
-                        .plusMinutes(5)
-        );
+		emailOtp.setExpiresAt(LocalDateTime.now().plusMinutes(5));
 
-        emailOtp.setUsed(false);
+		emailOtp.setUsed(false);
 
-        emailOtpRepository.save(emailOtp);
+		emailOtpRepository.save(emailOtp);
 
-        return otp;
-    }
+		return otp;
+	}
 
-    @Transactional
-    public void verifyOtp(
-            String email,
-            String otp,
-            OtpPurpose purpose) {
+	@Transactional
+	public void verifyOtp(String email, String otp, OtpPurpose purpose) {
 
-        EmailOtp emailOtp =
-                emailOtpRepository
-                        .findTopByEmailAndPurposeAndUsedFalseOrderByCreatedAtDesc(
-                                email,
-                                purpose
-                        )
-                        .orElseThrow(() ->
-                                new InvalidOtpException(
-                                        "Invalid OTP"
-                                )
-                        );
+		EmailOtp emailOtp = emailOtpRepository.findTopByEmailAndPurposeAndUsedFalseOrderByCreatedAtDesc(email, purpose)
+				.orElseThrow(() -> new InvalidOtpException("Invalid OTP"));
 
-        if (emailOtp.getExpiresAt()
-                .isBefore(LocalDateTime.now())) {
+		if (emailOtp.getExpiresAt().isBefore(LocalDateTime.now())) {
 
-            throw new InvalidOtpException(
-                    "OTP has expired"
-            );
-        }
+			throw new InvalidOtpException("OTP has expired");
+		}
 
-        if (!emailOtp.getOtp().equals(otp)) {
+		if (!emailOtp.getOtp().equals(otp)) {
 
-            throw new InvalidOtpException(
-                    "Invalid OTP"
-            );
-        }
+			throw new InvalidOtpException("Invalid OTP");
+		}
 
-        emailOtp.setUsed(true);
+		emailOtp.setUsed(true);
 
-        emailOtpRepository.save(emailOtp);
-    }
+		emailOtpRepository.save(emailOtp);
+	}
 }

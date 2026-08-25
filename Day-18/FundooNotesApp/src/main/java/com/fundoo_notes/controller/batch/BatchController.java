@@ -1,6 +1,5 @@
 package com.fundoo_notes.controller.batch;
 
-
 import org.springframework.batch.core.job.JobExecution;
 import org.springframework.http.ResponseEntity;
 
@@ -16,46 +15,34 @@ import com.fundoo_notes.service.batch.ExcelBatchService;
 @RequestMapping("/api/batch")
 public class BatchController {
 
-    private final ExcelBatchService excelBatchService;
+	private final ExcelBatchService excelBatchService;
 
-    public BatchController(
-            ExcelBatchService excelBatchService) {
+	public BatchController(ExcelBatchService excelBatchService) {
 
-        this.excelBatchService = excelBatchService;
-    }
+		this.excelBatchService = excelBatchService;
+	}
 
-    @PostMapping("/notes/import")
-    public ResponseEntity<?> importNotes(
+	@PostMapping("/notes/import")
+	public ResponseEntity<?> importNotes(
 
-            @RequestParam("file")
-            MultipartFile file,
+			@RequestParam("file") MultipartFile file,
 
-            Authentication authentication) {
+			Authentication authentication) {
 
-        if (file.isEmpty()) {
+		if (file.isEmpty()) {
 
-            return ResponseEntity.badRequest()
-                    .body("Excel file is required");
-        }
+			return ResponseEntity.badRequest().body("Excel file is required");
+		}
 
-        if (!file.getOriginalFilename()
-                .toLowerCase()
-                .endsWith(".xlsx")) {
+		if (!file.getOriginalFilename().toLowerCase().endsWith(".xlsx")) {
 
-            return ResponseEntity.badRequest()
-                    .body("Only .xlsx files are allowed");
-        }
+			return ResponseEntity.badRequest().body("Only .xlsx files are allowed");
+		}
 
-        String userEmail =
-                authentication.getName();
+		String userEmail = authentication.getName();
 
-        JobExecution execution =
-                excelBatchService.importNotes(
-                        file,
-                        userEmail);
+		JobExecution execution = excelBatchService.importNotes(file, userEmail);
 
-        return ResponseEntity.ok(
-                "Excel import started. Job ID: "
-                        + execution.getJobInstanceId());
-    }
+		return ResponseEntity.ok("Excel import started. Job ID: " + execution.getJobInstanceId());
+	}
 }

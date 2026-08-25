@@ -37,11 +37,12 @@ public class SecurityConfig {
 
 		http.csrf(csrf -> csrf.disable())
 				.sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-				.authorizeHttpRequests(auth -> auth.requestMatchers("/api/auth/register", "/api/auth/verify-otp", "/api/auth/login",
-						"/api/auth/forgot-password", "/api/auth/reset-password").permitAll().anyRequest()
-						.authenticated())
+				.authorizeHttpRequests(auth -> auth
+						.requestMatchers("/api/auth/register", "/api/auth/verify-otp", "/api/auth/login",
+								"/api/auth/forgot-password", "/api/auth/reset-password")
+						.permitAll().anyRequest().authenticated())
 				.addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
-		
+
 		return http.build();
 
 	}

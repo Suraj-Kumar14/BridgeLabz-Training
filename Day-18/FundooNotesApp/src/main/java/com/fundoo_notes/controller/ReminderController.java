@@ -23,46 +23,31 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class ReminderController {
 
-    private final ReminderService reminderService;
+	private final ReminderService reminderService;
 
+	@PostMapping("/notes/{noteId}")
+	public ResponseEntity<ReminderResponseDTO> createReminder(
 
-    @PostMapping("/notes/{noteId}")
-    public ResponseEntity<ReminderResponseDTO> createReminder(
+			@PathVariable Long noteId,
 
-            @PathVariable Long noteId,
+			@Valid @RequestBody ReminderRequestDTO request) {
 
-            @Valid
-            @RequestBody
-            ReminderRequestDTO request) {
+		return ResponseEntity.ok(reminderService.createReminder(noteId, request));
+	}
 
-        return ResponseEntity.ok(
-                reminderService.createReminder(
-                        noteId,
-                        request
-                )
-        );
-    }
+	@GetMapping
+	public ResponseEntity<List<ReminderResponseDTO>> getMyReminders() {
 
+		return ResponseEntity.ok(reminderService.getMyReminders());
+	}
 
-    @GetMapping
-    public ResponseEntity<List<ReminderResponseDTO>>
-            getMyReminders() {
+	@DeleteMapping("/{reminderId}")
+	public ResponseEntity<Void> cancelReminder(
 
-        return ResponseEntity.ok(
-                reminderService.getMyReminders()
-        );
-    }
+			@PathVariable Long reminderId) {
 
+		reminderService.cancelReminder(reminderId);
 
-    @DeleteMapping("/{reminderId}")
-    public ResponseEntity<Void> cancelReminder(
-
-            @PathVariable Long reminderId) {
-
-        reminderService.cancelReminder(reminderId);
-
-        return ResponseEntity
-                .noContent()
-                .build();
-    }
+		return ResponseEntity.noContent().build();
+	}
 }

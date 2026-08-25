@@ -1,6 +1,5 @@
 package com.fundoo_notes.controller.batch;
 
-
 import org.springframework.http.ResponseEntity;
 
 import org.springframework.web.bind.annotation.*;
@@ -11,33 +10,25 @@ import com.fundoo_notes.service.batch.ExportBatchService;
 @RequestMapping("/api/batch")
 public class BatchExportController {
 
-    private final ExportBatchService exportBatchService;
+	private final ExportBatchService exportBatchService;
 
-    public BatchExportController(
-            ExportBatchService exportBatchService) {
+	public BatchExportController(ExportBatchService exportBatchService) {
 
-        this.exportBatchService =
-                exportBatchService;
-    }
+		this.exportBatchService = exportBatchService;
+	}
 
-    @GetMapping("/notes/export")
-    public ResponseEntity<String> exportNotes() {
+	@GetMapping("/notes/export")
+	public ResponseEntity<String> exportNotes() {
 
-        try {
+		try {
 
-            exportBatchService.exportNotes();
+			exportBatchService.exportNotes();
 
-            return ResponseEntity.ok(
-                    "Notes exported successfully. " +
-                    "Check notes-export.xlsx");
+			return ResponseEntity.ok("Notes exported successfully. " + "Check notes-export.xlsx");
 
-        } catch (Exception e) {
+		} catch (Exception e) {
 
-            return ResponseEntity
-                    .internalServerError()
-                    .body(
-                        "Export failed: "
-                        + e.getMessage());
-        }
-    }
+			return ResponseEntity.internalServerError().body("Export failed: " + e.getMessage());
+		}
+	}
 }

@@ -26,129 +26,84 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class ReminderServiceImpl implements ReminderService {
 
-    private final ReminderRepository reminderRepository;
+	private final ReminderRepository reminderRepository;
 
-    private final NoteRepository noteRepository;
+	private final NoteRepository noteRepository;
 
-    private final UserRepository userRepository;
+	private final UserRepository userRepository;
 
+	@Override
+	public ReminderResponseDTO createReminder(Long noteId, ReminderRequestDTO request) {
 
-    @Override
-    public ReminderResponseDTO createReminder(
-            Long noteId,
-            ReminderRequestDTO request) {
+		User currentUser = getCurrentUser();
 
-        User currentUser = getCurrentUser();
+		Note note = noteRepository.findByNoteIdAndUser(noteId, currentUser)
+				.orElseThrow(() -> new NoteNotFoundException("Note not found with ID: " + noteId));
 
-        Note note = noteRepository
-                .findByNoteIdAndUser(noteId, currentUser)
-                .orElseThrow(() ->
-                        new NoteNotFoundException(
-                                "Note not found with ID: " + noteId
-                        )
-                );
+		Reminder reminder = new Reminder();
 
-        Reminder reminder = new Reminder();
+		reminder.setNote(note);
 
-        reminder.setNote(note);
+		reminder.setUser(currentUser);
 
-        reminder.setUser(currentUser);
+		reminder.setReminderTime(request.getReminderTime());
 
-        reminder.setReminderTime(
-                request.getReminderTime()
-        );
+		reminder.setStatus(ReminderStatus.PENDING);
 
-        reminder.setStatus(
-                ReminderStatus.PENDING
-        );
+		reminder.setCreatedAt(LocalDateTime.now());
 
-        reminder.setCreatedAt(
-                LocalDateTime.now()
-        );
+		Reminder savedReminder = reminderRepository.save(reminder);
 
-        Reminder savedReminder =
-                reminderRepository.save(reminder);
+		return toResponse(savedReminder);
+	}
 
-        return toResponse(savedReminder);
-    }
+	@Override
+	public List<ReminderResponseDTO> getMyReminders() {
 
+		User currentUser = getCurrentUser();
 
-    @Override
-    public List<ReminderResponseDTO> getMyReminders() {
+		return reminderRepository.findByUser(currentUser).stream().map(this::toResponse).toList();
+	}
 
-        User currentUser = getCurrentUser();
+	@Override
+	public void cancelReminder(Long reminderId) {
 
-        return reminderRepository
-                .findByUser(currentUser)
-                .stream()
-                .map(this::toResponse)
-                .toList();
-    }
+		User currentUser = getCurrentUser();
 
+		Reminder reminder = reminderRepository.findById(reminderId)
+				.orElseThrow(() -> new ReminderNotFoundException("Reminder not found with ID: " + reminderId));
 
-    @Override
-    public void cancelReminder(Long reminderId) {
+		if (!reminder.getUser().getId().equals(currentUser.getId())) {
 
-        User currentUser = getCurrentUser();
+			throw new RuntimeException("You are not authorized to cancel this reminder");
+		}
 
-        Reminder reminder = reminderRepository
-                .findById(reminderId)
-                .orElseThrow(() ->
-                        new ReminderNotFoundException(
-                                "Reminder not found with ID: " + reminderId
-                        )
-                );
+		reminder.setStatus(ReminderStatus.CANCELLED);
 
-        if (!reminder.getUser()
-                .getId()
-                .equals(currentUser.getId())) {
+		reminderRepository.save(reminder);
+	}
 
-            throw new RuntimeException(
-                    "You are not authorized to cancel this reminder"
-            );
-        }
+	private User getCurrentUser() {
 
-        reminder.setStatus(ReminderStatus.CANCELLED);
+		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 
-        reminderRepository.save(reminder);
-    }
+		String email = authentication.getName();
 
-    private User getCurrentUser() {
+		return userRepository.findByEmail(email).orElseThrow(() -> new UserNotFoundException("User not found"));
+	}
 
-        Authentication authentication =
-                SecurityContextHolder
-                        .getContext()
-                        .getAuthentication();
+	private ReminderResponseDTO toResponse(Reminder reminder) {
 
-        String email =
-                authentication.getName();
+		return new ReminderResponseDTO(
 
-        return userRepository
-                .findByEmail(email)
-                .orElseThrow(() ->
-                        new UserNotFoundException(
-                                "User not found"
-                        )
-                );
-    }
+				reminder.getReminderId(),
 
+				reminder.getNote().getNoteId(),
 
-    private ReminderResponseDTO toResponse(
-            Reminder reminder) {
+				reminder.getNote().getTitle(),
 
-        return new ReminderResponseDTO(
+				reminder.getReminderTime(),
 
-                reminder.getReminderId(),
-
-                reminder.getNote()
-                        .getNoteId(),
-
-                reminder.getNote()
-                        .getTitle(),
-
-                reminder.getReminderTime(),
-
-                reminder.getStatus()
-        );
-    }
+				reminder.getStatus());
+	}
 }

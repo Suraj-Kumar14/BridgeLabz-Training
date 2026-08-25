@@ -16,105 +16,71 @@ import org.springframework.context.annotation.Configuration;
 @EnableRabbit
 public class RabbitMQConfig {
 
- 
-    // Exchange 
-    public static final String NOTE_EXCHANGE =
-            "fundoo.note.exchange";
+	// Exchange
+	public static final String NOTE_EXCHANGE = "fundoo.note.exchange";
 
+	// Queue
+	public static final String NOTE_QUEUE = "fundoo.note.queue";
 
-    // Queue
-    public static final String NOTE_QUEUE =
-            "fundoo.note.queue";
+	// Routing Key
+	public static final String NOTE_CREATED_ROUTING_KEY = "note.created";
 
+	// Exchange Bean
+	@Bean
+	public DirectExchange noteExchange() {
 
-    // Routing Key
-    public static final String NOTE_CREATED_ROUTING_KEY =
-            "note.created";
+		return new DirectExchange(NOTE_EXCHANGE, true, false);
+	}
 
+	// Queue Bean
 
-    // Exchange Bean
-    @Bean
-    public DirectExchange noteExchange() {
+	@Bean
+	public Queue noteQueue() {
 
-        return new DirectExchange(
-                NOTE_EXCHANGE,
-                true,
-                false
-        );
-    }
+		return new Queue(NOTE_QUEUE, true);
+	}
 
+	// Binding
 
-    // Queue Bean
+	@Bean
+	public Binding noteBinding(Queue noteQueue, DirectExchange noteExchange) {
 
-    @Bean
-    public Queue noteQueue() {
+		return BindingBuilder.bind(noteQueue).to(noteExchange).with(NOTE_CREATED_ROUTING_KEY);
+	}
 
-        return new Queue(
-                NOTE_QUEUE,
-                true
-        );
-    }
+	// JSON Message Converter
 
+	@Bean
+	public JacksonJsonMessageConverter jacksonJsonMessageConverter() {
 
-    // Binding
- 
-    @Bean
-    public Binding noteBinding(
-            Queue noteQueue,
-            DirectExchange noteExchange) {
+		return new JacksonJsonMessageConverter();
+	}
 
-        return BindingBuilder
-                .bind(noteQueue)
-                .to(noteExchange)
-                .with(NOTE_CREATED_ROUTING_KEY);
-    }
+	// RabbitTemplate
 
+	@Bean
+	public RabbitTemplate rabbitTemplate(ConnectionFactory connectionFactory,
+			JacksonJsonMessageConverter messageConverter) {
 
-    // JSON Message Converter
- 
-    @Bean
-    public JacksonJsonMessageConverter jacksonJsonMessageConverter() {
+		RabbitTemplate rabbitTemplate = new RabbitTemplate(connectionFactory);
 
-        return new JacksonJsonMessageConverter();
-    }
+		rabbitTemplate.setMessageConverter(messageConverter);
 
+		return rabbitTemplate;
+	}
 
-    // RabbitTemplate
- 
-    @Bean
-    public RabbitTemplate rabbitTemplate(
-            ConnectionFactory connectionFactory,
-            JacksonJsonMessageConverter messageConverter) {
+	// RabbitMQ Listener Factory
 
-        RabbitTemplate rabbitTemplate =
-                new RabbitTemplate(connectionFactory);
+	@Bean
+	public SimpleRabbitListenerContainerFactory rabbitListenerContainerFactory(ConnectionFactory connectionFactory,
+			JacksonJsonMessageConverter messageConverter) {
 
-        rabbitTemplate.setMessageConverter(
-                messageConverter
-        );
+		SimpleRabbitListenerContainerFactory factory = new SimpleRabbitListenerContainerFactory();
 
-        return rabbitTemplate;
-    }
+		factory.setConnectionFactory(connectionFactory);
 
+		factory.setMessageConverter(messageConverter);
 
-    // RabbitMQ Listener Factory
-
-    @Bean
-    public SimpleRabbitListenerContainerFactory rabbitListenerContainerFactory(
-            ConnectionFactory connectionFactory,
-            JacksonJsonMessageConverter messageConverter) {
-
-        SimpleRabbitListenerContainerFactory factory =
-                new SimpleRabbitListenerContainerFactory();
-
-        factory.setConnectionFactory(
-                connectionFactory
-        );
-
-        factory.setMessageConverter(
-                messageConverter
-        );
-
-        return factory;
-    }
+		return factory;
+	}
 }

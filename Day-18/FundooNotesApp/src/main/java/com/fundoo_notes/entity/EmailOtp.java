@@ -6,27 +6,26 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
-
 @Entity
 @Table(name = "email_otps")
 @Getter
 @Setter
 public class EmailOtp {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
 
-    private String email;
+	private String email;
 
-    private String otp;
+	private String otp;
 
-    @Enumerated(EnumType.STRING)
-    private OtpPurpose purpose;
+	@Enumerated(EnumType.STRING)
+	private OtpPurpose purpose;
 
-    private LocalDateTime expiresAt;
+	private LocalDateTime expiresAt;
 
-    private boolean used;
+	private boolean used;
 
-    private LocalDateTime createdAt;
+	private LocalDateTime createdAt;
 }

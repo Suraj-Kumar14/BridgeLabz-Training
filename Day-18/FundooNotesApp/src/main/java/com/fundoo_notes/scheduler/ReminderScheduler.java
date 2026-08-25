@@ -21,87 +21,56 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class ReminderScheduler {
 
-    private final ReminderRepository reminderRepository;
+	private final ReminderRepository reminderRepository;
 
-    private final ReminderProducer reminderProducer;
+	private final ReminderProducer reminderProducer;
 
-    @Scheduled(fixedRate = 10000)
-    @Transactional
-    public void checkDueReminders() {
+	@Scheduled(fixedRate = 10000)
+	@Transactional
+	public void checkDueReminders() {
 
-        recoverStuckReminders();
+		recoverStuckReminders();
 
-        List<Reminder> reminders =
-                reminderRepository
-                        .findByStatusAndReminderTimeLessThanEqual(
-                                ReminderStatus.PENDING,
-                                LocalDateTime.now()
-                        );
+		List<Reminder> reminders = reminderRepository.findByStatusAndReminderTimeLessThanEqual(ReminderStatus.PENDING,
+				LocalDateTime.now());
 
-        if (reminders.isEmpty()) {
-            return;
-        }
+		if (reminders.isEmpty()) {
+			return;
+		}
 
-        log.info(
-                "Found {} due reminder(s)",
-                reminders.size()
-        );
+		log.info("Found {} due reminder(s)", reminders.size());
 
-        for (Reminder reminder : reminders) {
+		for (Reminder reminder : reminders) {
 
-            reminder.setStatus(
-                    ReminderStatus.PROCESSING
-            );
+			reminder.setStatus(ReminderStatus.PROCESSING);
 
-            reminder.setProcessingStartedAt(
-                    LocalDateTime.now()
-            );
+			reminder.setProcessingStartedAt(LocalDateTime.now());
 
-            ReminderMessageDTO message =
-                    new ReminderMessageDTO(
-                            reminder.getReminderId(),
-                            reminder.getNote().getNoteId(),
-                            reminder.getUser().getId(),
-                            reminder.getNote().getTitle(),
-                            reminder.getUser().getEmail()
-                    );
+			ReminderMessageDTO message = new ReminderMessageDTO(reminder.getReminderId(),
+					reminder.getNote().getNoteId(), reminder.getUser().getId(), reminder.getNote().getTitle(),
+					reminder.getUser().getEmail());
 
-            log.info(
-                    "Publishing reminder. reminderId={}, email={}",
-                    reminder.getReminderId(),
-                    reminder.getUser().getEmail()
-            );
+			log.info("Publishing reminder. reminderId={}, email={}", reminder.getReminderId(),
+					reminder.getUser().getEmail());
 
-            reminderProducer.sendMessage(message);
-        }
-    }
+			reminderProducer.sendMessage(message);
+		}
+	}
 
-    private void recoverStuckReminders() {
+	private void recoverStuckReminders() {
 
-        LocalDateTime recoveryTime =
-                LocalDateTime.now().minusMinutes(1);
+		LocalDateTime recoveryTime = LocalDateTime.now().minusMinutes(1);
 
-        List<Reminder> stuckReminders =
-                reminderRepository
-                        .findByStatusAndProcessingStartedAtLessThanEqual(
-                                ReminderStatus.PROCESSING,
-                                recoveryTime
-                        );
+		List<Reminder> stuckReminders = reminderRepository
+				.findByStatusAndProcessingStartedAtLessThanEqual(ReminderStatus.PROCESSING, recoveryTime);
 
-        for (Reminder reminder : stuckReminders) {
+		for (Reminder reminder : stuckReminders) {
 
-            log.warn(
-                    "Recovering stuck reminder. reminderId={}",
-                    reminder.getReminderId()
-            );
+			log.warn("Recovering stuck reminder. reminderId={}", reminder.getReminderId());
 
-            reminder.setStatus(
-                    ReminderStatus.PENDING
-            );
+			reminder.setStatus(ReminderStatus.PENDING);
 
-            reminder.setProcessingStartedAt(
-                    null
-            );
-        }
-    }
+			reminder.setProcessingStartedAt(null);
+		}
+	}
 }

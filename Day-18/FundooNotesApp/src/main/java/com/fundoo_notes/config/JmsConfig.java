@@ -9,20 +9,15 @@ import org.springframework.jms.support.converter.MessageType;
 @Configuration
 public class JmsConfig {
 
-    @Bean
-    public MessageConverter messageConverter() {
+	@Bean
+	public MessageConverter messageConverter() {
 
-        MappingJackson2MessageConverter converter =
-                new MappingJackson2MessageConverter();
+		MappingJackson2MessageConverter converter = new MappingJackson2MessageConverter();
 
-        converter.setTargetType(
-                MessageType.TEXT
-        );
+		converter.setTargetType(MessageType.TEXT);
 
-        converter.setTypeIdPropertyName(
-                "_type"
-        );
+		converter.setTypeIdPropertyName("_type");
 
-        return converter;
-    }
+		return converter;
+	}
 }

@@ -13,23 +13,14 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class ReminderProducer {
 
-    private static final String REMINDER_QUEUE =
-            "reminder-queue";
+	private static final String REMINDER_QUEUE = "reminder-queue";
 
-    private final JmsTemplate jmsTemplate;
+	private final JmsTemplate jmsTemplate;
 
-    public void sendMessage(
-            ReminderMessageDTO message) {
+	public void sendMessage(ReminderMessageDTO message) {
 
-        jmsTemplate.convertAndSend(
-                REMINDER_QUEUE,
-                message
-        );
+		jmsTemplate.convertAndSend(REMINDER_QUEUE, message);
 
-        log.info(
-                "Reminder sent to JMS queue. reminderId={}, userId={}",
-                message.getReminderId(),
-                message.getUserId()
-        );
-    }
+		log.info("Reminder sent to JMS queue. reminderId={}, userId={}", message.getReminderId(), message.getUserId());
+	}
 }

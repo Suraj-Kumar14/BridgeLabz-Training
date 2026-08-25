@@ -7,35 +7,35 @@ import org.springframework.stereotype.Component;
 @Component
 public class BatchJobListener implements JobExecutionListener {
 
-    @Override
-    public void beforeJob(JobExecution jobExecution) {
+	@Override
+	public void beforeJob(JobExecution jobExecution) {
 
-        System.out.println("====================================");
-        System.out.println("Spring Batch Job Started");
-        System.out.println("Job Name : " + jobExecution.getJobInstance().getJobName());
-        System.out.println("Job ID   : " + jobExecution.getJobInstanceId());
-        System.out.println("====================================");
-    }
+		System.out.println("====================================");
+		System.out.println("Spring Batch Job Started");
+		System.out.println("Job Name : " + jobExecution.getJobInstance().getJobName());
+		System.out.println("Job ID   : " + jobExecution.getJobInstanceId());
+		System.out.println("====================================");
+	}
 
-    @Override
-    public void afterJob(JobExecution jobExecution) {
+	@Override
+	public void afterJob(JobExecution jobExecution) {
 
-        System.out.println("====================================");
-        System.out.println("Spring Batch Job Completed");
-        System.out.println("Job Name : " + jobExecution.getJobInstance().getJobName());
-        System.out.println("Job ID   : " + jobExecution.getJobInstanceId());
-        System.out.println("Status   : " + jobExecution.getStatus());
+		System.out.println("====================================");
+		System.out.println("Spring Batch Job Completed");
+		System.out.println("Job Name : " + jobExecution.getJobInstance().getJobName());
+		System.out.println("Job ID   : " + jobExecution.getJobInstanceId());
+		System.out.println("Status   : " + jobExecution.getStatus());
 
-        if (jobExecution.getStatus().isUnsuccessful()) {
-            System.out.println("Batch Job Failed!");
+		if (jobExecution.getStatus().isUnsuccessful()) {
+			System.out.println("Batch Job Failed!");
 
-            for (Throwable error : jobExecution.getAllFailureExceptions()) {
-                System.out.println("Error : " + error.getMessage());
-            }
-        } else {
-            System.out.println("Batch Job Successfully Completed!");
-        }
+			for (Throwable error : jobExecution.getAllFailureExceptions()) {
+				System.out.println("Error : " + error.getMessage());
+			}
+		} else {
+			System.out.println("Batch Job Successfully Completed!");
+		}
 
-        System.out.println("====================================");
-    }
+		System.out.println("====================================");
+	}
 }

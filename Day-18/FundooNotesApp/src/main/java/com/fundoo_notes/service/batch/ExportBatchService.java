@@ -10,32 +10,24 @@ import org.springframework.stereotype.Service;
 @Service
 public class ExportBatchService {
 
-    private final JobLauncher jobLauncher;
+	private final JobLauncher jobLauncher;
 
-    private final Job exportNotesJob;
+	private final Job exportNotesJob;
 
-    public ExportBatchService(
-            JobLauncher jobLauncher,
-            Job exportNotesJob) {
+	public ExportBatchService(JobLauncher jobLauncher, Job exportNotesJob) {
 
-        this.jobLauncher = jobLauncher;
-        this.exportNotesJob = exportNotesJob;
-    }
+		this.jobLauncher = jobLauncher;
+		this.exportNotesJob = exportNotesJob;
+	}
 
-    public JobExecution exportNotes()
-            throws Exception {
+	public JobExecution exportNotes() throws Exception {
 
-        JobParameters parameters =
-                new JobParametersBuilder()
+		JobParameters parameters = new JobParametersBuilder()
 
-                        .addLong(
-                                "timestamp",
-                                System.currentTimeMillis())
+				.addLong("timestamp", System.currentTimeMillis())
 
-                        .toJobParameters();
+				.toJobParameters();
 
-        return jobLauncher.run(
-                exportNotesJob,
-                parameters);
-    }
+		return jobLauncher.run(exportNotesJob, parameters);
+	}
 }

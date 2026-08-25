@@ -9,22 +9,16 @@ import com.fundoo_notes.dto.RabbitMessageDTO;
 @Service
 public class NoteMessageProducer {
 
-    private final RabbitTemplate rabbitTemplate;
+	private final RabbitTemplate rabbitTemplate;
 
-    public NoteMessageProducer(RabbitTemplate rabbitTemplate) {
-        this.rabbitTemplate = rabbitTemplate;
-    }
+	public NoteMessageProducer(RabbitTemplate rabbitTemplate) {
+		this.rabbitTemplate = rabbitTemplate;
+	}
 
-    public void sendNoteCreatedMessage(RabbitMessageDTO message) {
+	public void sendNoteCreatedMessage(RabbitMessageDTO message) {
 
-        rabbitTemplate.convertAndSend(
-                RabbitMQConfig.NOTE_EXCHANGE,
-                RabbitMQConfig.NOTE_CREATED_ROUTING_KEY,
-                message
-        );
+		rabbitTemplate.convertAndSend(RabbitMQConfig.NOTE_EXCHANGE, RabbitMQConfig.NOTE_CREATED_ROUTING_KEY, message);
 
-        System.out.println(
-                "Message sent to RabbitMQ: " + message
-        );
-    }
+		System.out.println("Message sent to RabbitMQ: " + message);
+	}
 }

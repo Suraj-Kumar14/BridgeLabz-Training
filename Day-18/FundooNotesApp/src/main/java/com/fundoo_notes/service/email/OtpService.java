@@ -7,15 +7,12 @@ import org.springframework.stereotype.Service;
 @Service
 public class OtpService {
 
-    private final SecureRandom secureRandom =
-            new SecureRandom();
+	private final SecureRandom secureRandom = new SecureRandom();
 
-    public String generateOtp() {
+	public String generateOtp() {
 
-        int otp =
-                100000
-                + secureRandom.nextInt(900000);
+		int otp = 100000 + secureRandom.nextInt(900000);
 
-        return String.valueOf(otp);
-    }
+		return String.valueOf(otp);
+	}
 }

@@ -28,35 +28,31 @@ import lombok.Setter;
 @AllArgsConstructor
 public class Note {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long noteId;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long noteId;
 
-    @Column(nullable = false)
-    private String title;
+	@Column(nullable = false)
+	private String title;
 
-    @Column(columnDefinition = "TEXT")
-    private String description;
+	@Column(columnDefinition = "TEXT")
+	private String description;
 
-    private LocalDateTime createdAt;
+	private LocalDateTime createdAt;
 
-    private LocalDateTime updateAt;
+	private LocalDateTime updateAt;
 
-    private boolean pinned = false;
+	private boolean pinned = false;
 
-    private boolean archived = false;
+	private boolean archived = false;
 
-    private boolean trashed = false;
+	private boolean trashed = false;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id", nullable = false)
-    private User user;
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "user_id", nullable = false)
+	private User user;
 
-    @ManyToMany
-    @JoinTable(
-        name = "note_tags",
-        joinColumns = @JoinColumn(name = "note_id"),
-        inverseJoinColumns = @JoinColumn(name = "tag_id")
-    )
-    private Set<Tag> tags = new HashSet<>();
+	@ManyToMany
+	@JoinTable(name = "note_tags", joinColumns = @JoinColumn(name = "note_id"), inverseJoinColumns = @JoinColumn(name = "tag_id"))
+	private Set<Tag> tags = new HashSet<>();
 }

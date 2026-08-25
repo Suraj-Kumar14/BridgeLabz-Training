@@ -13,44 +13,39 @@ import java.time.LocalDateTime;
 
 public class ExcelNoteWriter implements ItemWriter<ExcelNoteDTO> {
 
-    private final NoteRepository noteRepository;
-    private final UserRepository userRepository;
-    private final String userEmail;
+	private final NoteRepository noteRepository;
+	private final UserRepository userRepository;
+	private final String userEmail;
 
-    public ExcelNoteWriter(
-            NoteRepository noteRepository,
-            UserRepository userRepository,
-            String userEmail) {
+	public ExcelNoteWriter(NoteRepository noteRepository, UserRepository userRepository, String userEmail) {
 
-        this.noteRepository = noteRepository;
-        this.userRepository = userRepository;
-        this.userEmail = userEmail;
-    }
+		this.noteRepository = noteRepository;
+		this.userRepository = userRepository;
+		this.userEmail = userEmail;
+	}
 
-    @Override
-    public void write(Chunk<? extends ExcelNoteDTO> chunk) {
+	@Override
+	public void write(Chunk<? extends ExcelNoteDTO> chunk) {
 
-        User user = userRepository.findByEmail(userEmail)
-                .orElseThrow(() ->
-                        new RuntimeException("User not found"));
+		User user = userRepository.findByEmail(userEmail).orElseThrow(() -> new RuntimeException("User not found"));
 
-        for (ExcelNoteDTO dto : chunk.getItems()) {
+		for (ExcelNoteDTO dto : chunk.getItems()) {
 
-            Note note = new Note();
+			Note note = new Note();
 
-            note.setTitle(dto.getTitle());
-            note.setDescription(dto.getDescription());
+			note.setTitle(dto.getTitle());
+			note.setDescription(dto.getDescription());
 
-            note.setCreatedAt(LocalDateTime.now());
-            note.setUpdateAt(LocalDateTime.now());
+			note.setCreatedAt(LocalDateTime.now());
+			note.setUpdateAt(LocalDateTime.now());
 
-            note.setPinned(false);
-            note.setArchived(false);
-            note.setTrashed(false);
+			note.setPinned(false);
+			note.setArchived(false);
+			note.setTrashed(false);
 
-            note.setUser(user);
+			note.setUser(user);
 
-            noteRepository.save(note);
-        }
-    }
+			noteRepository.save(note);
+		}
+	}
 }
