@@ -1206,3 +1206,67 @@ The original Fundoo Notes application contains multiple functionalities inside o
 ### Code Link : [Day-19](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/Refresher-Training/Day-19)
 
 ---
+
+## Day 20 - Service Registry (Eureka) & Microservices Completion
+
+**Date:** 27 August 2026  
+**Project:** Fundoo Notes Application  
+**Topic:** Microservices Architecture, Service Discovery & Application Decomposition
+
+### 📌 Overview
+
+Day 20 focuses on completing the migration of the **Fundoo Notes Application** from a Monolithic Architecture to a Microservices Architecture.
+
+The application is divided into independent services based on business responsibilities.
+
+The architecture uses:
+
+- **Netflix Eureka** for Service Discovery
+- **Spring Cloud Gateway** as the single entry point
+- **JWT** for Authentication and Authorization
+- **MySQL** for persistent data storage
+- **Redis** for caching and temporary data
+- **RabbitMQ** for asynchronous messaging
+- **JMS / Artemis** for asynchronous background processing
+- **SMTP** for email communication
+
+### 🎯 Learning Objectives
+
+- Understand Microservices Architecture
+- Understand Service Registry and Service Discovery
+- Implement Eureka Server
+- Register microservices with Eureka
+- Understand API Gateway and request routing
+- Separate business responsibilities into services
+- Understand inter-service communication
+- Implement Authentication and Authorization
+- Understand database ownership in microservices
+- Implement asynchronous communication
+- Understand Redis caching
+- Understand RabbitMQ messaging
+- Understand JMS / Artemis messaging
+- Complete the Fundoo Notes microservices architecture
+
+### 🏗️ Final Project Structure
+
+```text
+Day-20/
+└── fundoo-microservices/
+    │
+    ├── fundoo-eureka-server/
+    │
+    ├── fundoo-api-gateway/
+    │
+    ├── fundoo-auth-service/
+    │
+    ├── fundoo-note-service/
+    │
+    ├── fundoo-notification-service/
+    │
+    └── README.md
+
+```
+
+### Code Link : [Day-20](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/Refresher-Training/Day-20)
+
+---
