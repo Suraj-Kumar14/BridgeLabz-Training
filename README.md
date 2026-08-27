@@ -1118,3 +1118,91 @@ Standard Error Response
 ### Code Link : [Day-18](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/Refresher-Training/Day-18)
 
 ---
+
+## Day-19: Monolith vs Microservices & Spring Boot Microservices
+
+**Date:** 26 August 2026
+
+### 📚 Topics Covered
+
+- Monolithic Architecture vs Microservices Architecture
+- Advantages and disadvantages of Monolithic Architecture
+- Advantages and disadvantages of Microservices Architecture
+- Spring Boot Microservices
+- Microservices Project Structure
+- Inter-Service Communication
+- API Gateway
+- Eureka Service Discovery
+- Fundoo Notes Microservices Decomposition
+- User Management Service
+- Authentication Service
+
+### 1. Monolithic Architecture
+
+Monolithic Architecture is an application architecture where all the functionalities of an application are developed and deployed as a **single application**.
+
+#### Fundoo Notes Monolithic Architecture
+
+The original Fundoo Notes application contains multiple functionalities inside one Spring Boot application:
+
+```text
+                     Fundoo Notes Application
+                              |
+          +-------------------+-------------------+
+          |                   |                   |
+   User Management      Authentication       Notes Management
+          |                   |                   |
+   Registration              Login          Create Notes
+   Email OTP            Forgot Password     Update Notes
+   Verify OTP            Reset Password      Delete Notes
+   Resend OTP                                  Pin
+                                               Archive
+                                               Trash
+                                               Search
+                                               Tags
+          |
+          v
+      MySQL Database
+```
+
+#### Fundoo Notes MicroServices Architecture
+
+                              CLIENT
+                                |
+                                v
+                       +----------------+
+                       |  API GATEWAY   |
+                       +----------------+
+                                |
+                                v
+                       +----------------+
+                       | EUREKA SERVER  |
+                       | Service        |
+                       | Discovery      |
+                       +----------------+
+                                |
+              +-----------------+-----------------+
+              |                 |                 |
+              v                 v                 v
+       +-------------+   +-------------+   +-------------+
+       |    AUTH     |   |    USER     |   |    NOTE     |
+       |   SERVICE   |   |   SERVICE   |   |   SERVICE   |
+       +-------------+   +-------------+   +-------------+
+              |                 |                 |
+              v                 v                 v
+           Auth DB           User DB           Note DB
+              |
+       +------+------+
+       |             |
+       v             v
+     Redis        RabbitMQ
+                     |
+                     v
+                 Email Service
+                     |
+                     v
+                    SMTP
+
+### Code Link : [Day-19](https://github.com/Suraj-Kumar14/BridgeLabz-Training/tree/Refresher-Training/Day-19)
+
+---
