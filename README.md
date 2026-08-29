@@ -1255,6 +1255,8 @@ Day-20/
     │
     ├── fundoo-eureka-server/
     │
+    ├── fundoo-eureka-server/
+    │
     ├── fundoo-api-gateway/
     │
     ├── fundoo-auth-service/
